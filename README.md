@@ -162,9 +162,17 @@ Anyway, We can see here, on the last page (it's like 3AM, I need some sleep -- o
 
 ## GitHub Workflow Summary
 
-ordered list of steps (numbers)
+1. Create a New Branch
+2. Create / Upload New Files
+3. Edit Files
+4. Commit Changes
+5. Open a Pull Request
+6. **[OPTIONAL]** Comment Your Pull Request
+7. **[OPTIONAL]** Merge Your Pull Request
+8. **[OPTIONAL]** Delete Your New Branch
+9. ***Repeat as Necessary***
 
-> **FINAL NOTE:** See, even this readme file is a work-in-progress! I wanted to get a complete version of these instructions uploaded as soon as possible so that we could all start working on the website, so I only covered the Web Browser / GitHub Method, but honestly, I think that's all we really need for now anyway. I use the command line, but it's a lot more complicated, and using the Web Browser first will make it a lot easier to understand the `git` commands later if you want to learn. The Desktop App isn't hard to use either, although I haven't used it for a long time, and there are also VSCode plugins that make using GitHub easy too. I would recommend using the Web Browser until you get used to it though, as it's a great place to start. Welcome to GitHub everyone!
+> **FINAL NOTE:** See, even this readme file is a work-in-progress! I wanted to get a complete version of these instructions uploaded as soon as possible so that we could all start working on the website, so I only covered the Web Browser / GitHub Method, but honestly, I think that's all we really need for now anyway. I use the command line, but it's a lot more complicated, and using the Web Browser first will make it a lot easier to understand the `git` commands later if you want to learn. The Desktop App isn't hard to use either, although I haven't used it for a long time, and there are also VSCode plugins that make using GitHub easy too. I would recommend using the Web Browser until you get used to it though, as it's a great place to start.
 
 
 
