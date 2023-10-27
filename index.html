@@ -1,0 +1,183 @@
+<html lang="en">  <!-- set HTML document language to English (en) - for browser translate functions -->
+    
+
+    <!-- Document Head (Metadata) -->
+    <head>
+
+        <!-- Page Attributes -->
+        <title> i101 - Home </title>  <!-- webpage title -->
+        
+        <!-- Import CSS / JS Libraries -->
+        <link rel="stylesheet" href="main.css">  <!-- import global stylesheet -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">  <!-- import Skeleton framework -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">  <!-- import Font Awesome -->
+        <script src="main.js"></script>  <!-- import global scripts (for navbar) -->
+
+    </head>
+
+
+    <!-- Document Header (Navbar) -->
+    <header>  <!-- has custom styling to keep on top and stretch to page width -->
+
+        <div class="navbarContainer">  <!-- navbar container -->
+
+            <div class="row">  <!-- navbar row -->
+
+                <div class="one columns">  <!-- navbar image (navbar column) -->
+                    <img class="navbarImage" src="images/radia1.png" alt="Radia Perlman at Podium">  <!-- navbar image (with alt text for increased accessibility) -->
+                </div>
+
+                <div class="row">  <!-- nested navbar row (inside another row) -->
+
+                    <div class="six columns navbarHeading">  <!-- navbar heading (navbar column) -->
+                        Radia Perlman PhD
+                        <br>  <!-- line break -->
+                        <span class="subHeading">"Mother of the Internet"</span>  <!-- navbar subheading -->
+                    </div>
+
+                    <div class="six columns">  <!-- navbar links (navbar column) -->
+                        
+                        <ol>  <!-- navbar links (ordered list) -->
+
+                            <a onclick="toggle_on_page_links()" class="fauxButton" id="expandNavlinks"><i class="fa fa-bars"></i></a>  <!-- faux button (link) to show navbar links -->
+
+                            <span id="onPageLinks" class="onPage">  <!-- hide-able navbar ("on page") links -->
+
+                                <a onclick="toggle_on_page_links()" class="fauxButton"><i id="expandNavlinks" class="fa fa-grip-lines-vertical"></i></a>  <!-- hidden: faux button (link) to hide navbar links -->
+                                <!-- using duplicate ID's is forbidden / bad practice! -- they're never on the DOM (Document Object Model) at the same time, and it made the JS a little easier, so I did it here (but don't!) -->
+
+                                <span class="navLinkContainer">  <!-- navbar links container -->
+
+                                    <li><a class="active" href="index.html">Home</a></li>  <!-- current ('active') page link -->
+                                    <li><a href="#">Deliverables</a></li>  <!-- 'deliverables' page link -->
+                                    <li><a href="#">Team</a></li>  <!-- 'team' page link -->
+                                    <li><a href="#">Acknowledgements</a></li>  <!-- 'acknowledgements' page link -->
+
+                                </span>  <!-- if you use this page as a template: change the 'active' tag to the new page's link above! -->
+
+                            </span>  <!-- this is probably bad practice too: the span / scripted anchor within the 'ol' tag (I'm not 100% sure though) -->
+
+                        </ol>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- Document Body (Content) -->
+    <body class="scrollingBackground">  <!-- set the scrolling background image for the document body -->
+
+        <!-- Content Block (First Container) -->
+        <div class="bodyContainer">  <!-- content container -->
+
+            <div class="roundImage">  <!-- image cropping 'container' -->
+                
+                <img src="images/radia2.jpg" alt="Round Vintage Radia Perlman Sephia Photo">  <!-- image (with alt text for increased accessibility) -->
+            
+            </div>  
+
+            <h1 class="bodyHeading firstHeading">Background</h1>  <!-- content heading -->
+
+            <p>  <!-- content paragraph -->
+                Radia Perlman is an underrepresented innovator in the world of IT, Computer Science and Networking.
+                <br><br style="line-height: 0.4em;">  <!-- line breaks (one with custom spacing) -->
+                Radia was born on December 18, 1951 in Portsmouth, Virginia. Perlman earned her PhD at the Massachusetts
+                Institute of Technology (MIT) in 1988. Perlman is also known for being gifted in music and poetry. She is often
+                referred to as the “Mother of the Internet,” a title which she humbly denies, citing that the internet only is what
+                it is today due to the contributions of numerous bright minds in her field. She wrote a wonderfully illustrative
+                poem, or as she would call it, her algorithm’s “Algorhyme” about her most well-known contribution,
+                Spanning-Tree Protocol, or STP, and we really wanted to highlight it here.
+                <br>  <!-- line break -->
+            </p>
+                        
+        </div>
+
+        <!-- Content Block (Second Container) -->
+        <div class="bodyContainer">  <!-- content container -->
+
+            <p>  <!-- content paragraph -->
+
+                <h2 class="bodySubheading">Algorhyme</h2>  <!-- content subheading (different styling than 'heading') -->
+                <br>  <!-- line break -->
+
+                <span class="poem">  <!-- 'poem' container -->
+                    I think that I shall never see<br>  <!-- line break -->
+                    A graph more lovely than a tree.<br>  <!-- line break -->
+                    A tree whose crucial property<br>  <!-- line break -->
+                    Is loop-free connectivity.<br>  <!-- line break -->
+                    A tree which must be sure to span<br>  <!-- line break -->
+                    So packets can reach every LAN.<br>  <!-- line break -->
+                    First the root must be selected.<br>  <!-- line break -->
+                    By ID it is elected.<br>  <!-- line break -->
+                    Least cost paths from root are traced.<br>  <!-- line break -->
+                    In the tree these paths are placed.<br>  <!-- line break -->
+                    A mesh is made by folks like me<br>  <!-- line break -->
+                    Then bridges find a spanning tree.<br><br style="line-height: 0.6em;">  <!-- line break (one with custom spacing) -->
+                    <span class="signature">-Radia Perlman</span>  <!-- special 'signature' line -->
+
+                </span>
+
+            </p>
+
+        </div>
+
+        <!-- Content Block (Third Container) -->
+        <div class="bodyContainer">  <!-- content container -->
+
+            <h1 class="bodyHeading secondHeading">Contributions to Technology</h1>  <!-- content heading -->
+
+            <img class="rectangularImage" src="images/radia3.png" alt="Radia Perlman Smiling, Holding a Book">  <!-- image (with alt text for increased accessibility) -->
+
+            <p>  <!-- content paragraph -->
+                Before delving into the obligatory list of Radia Perlman’s contributions to technology, informatics, and computing, we wanted to highlight 
+                something about her that we’ve already briefly touched on, something that her colleagues deem an integral element of her contributions to any 
+                field. To quote the article Radia Perlman on She Thought It, “Radia Perlman is not only known for her major contributions to the Internet, but 
+                also for being a poet and for loving music,” they go on to quote Perlman as insisting, “Every algorithm ought to have an associated algorhyme” 
+                (Stamatopoulou, 2019). In a field of technologically fascinating, yet dour and rigid whitepapers and other scholarly literature, we posit that 
+                Radia Perlman brought a warm, human element to a somewhat cold, mechanical field. Her radiant enthusiasm for technology, networking, and 
+                telecommunications alone is worth highlighting. Again, to quote She Thought It, “she didn’t hesitate to play on the piano the piece Rondo 
+                Capriccioso, composed by the French composer Camille Saint-Saëns, for a National Inventors Hall of Fame video, or to perform stand-up comedy in 
+                a passenger talent show, while she was on a cruise to Russia to see a solar eclipse” (Stamatopoulou, 2019). The many facets to her personality 
+                are truly inspiring and, innovations aside, if more people were like Radia Perlman, the world would be a much more jovial place. 
+                <br><br>  <!-- line breaks -->
+                Radia Perlman approached technology with a zeal commensurate with her enthusiasm for life. To say that she found equal success would be an 
+                understatement. She worked hand in hand with International Business Machines (IBM) to develop several routing standards, predominantly the Open 
+                Systems Interconnections Interdomain Routing Protocol (IDRP) (Stamatopoulou, 2019). In addition to IBM, she also worked with Cisco Systems Inc. 
+                to standardize the IDRP protocol by serving on the prestigious American National Standards Institute (ANSI) sub-committee (Stamatopoulou, 2019). 
+                Aside from her contributions to IDRP, Perlman also played such a significant role in early innovation of Interconnected Networks and the Internet 
+                that she was dubbed the, “Mother of the Internet” (LMIT, 2023). This moniker was earned primarily due to her invention of the algorithm behind 
+                the aforementioned Spanning Tree Protocol (STP), which was a critical piece of the puzzle of high-density, broad-spectrum information routing 
+                (LMIT, 2023). To quote LMIT, Perlman is described as, “having put the ‘basic traffic rules’ into place for the Internet” (LMIT, 2023). This 
+                protocol remains in use to this day, having seen widespread adoption by the Institute of Electrical and Electronics Engineers (IEEE) as a 
+                standard for bridge technology (LMIT, 2023). While Perlman contributed so much to the fields of information technology, telecommunications, and 
+                computer science as a whole, her last innovation that we wanted to highlight was to the field of network security. While working for Sun 
+                Microsystems, she reconstituted her previous breakthroughs with STP but on a cybersecurity front when she redesigned her algorithm to be “more 
+                robust, more stable, and… to establish optimal paths between points” while working on a project dubbed Transparent Interconnection of Lots of 
+                Links, or TRILL (LMIT, 2023). In addition to TRILL, she also pushed cryptography forward with her “ephemerizer” project, which enabled users to 
+                ensure that encrypted data couldn’t be accessed after a preset expiration date, via subsequent destruction of encryption keys (LMIT, 2023). Radia 
+                Perlman made so many innovations to her many fields, and aside from her clever naming conventions, ingenuity, and creativity, she was always the 
+                light in an otherwise dark room, and her poetry makes understanding some of the most complex issues in telecommunications trivial and a joy. 
+            </p>
+                        
+        </div>
+        
+    </body>
+
+
+    <!-- Document Footer (Footer) -->
+    <footer>
+        <div class="pageFooter">  <!-- footer container -->
+            <h3 class="pageFooter">I101 - Fall 2023&nbsp;|&nbsp;Layout by <a href="http://getskeleton.com">Skeleton</h3>  <!-- footer content -->
+        </div>
+    </footer>
+
+</html>
+
+<!-- TODO (NOTE TO SELF): -->
+<!-- I'll make the Acknowledgements page this weekend (I wanted to link resources and post licenses per the assignment) -- I'll also add references -->
