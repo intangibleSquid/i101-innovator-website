@@ -146,6 +146,35 @@
 
 /* ======================================================================
 
+                           ACKNOWLEDGEMENTS.HTML
+
+   ====================================================================== */
+
+   /*  ---[[[ body ]]]---  */
+.acknowledgementsHeading {  /* acknowledgements heading */
+    margin-right: 1230px;  /* margin (right) */
+}
+
+.acknowledgementsHeading::after {  /* line after acknowledgements heading (pseudo-element, child of 'acknowledgements heading') */
+    width: 65%;  /* width */
+}
+
+.acknowledgementsContainer {  /* acknowledgements container */
+    line-height: 3rem;  /* line height */
+    letter-spacing: .005rem;  /* letter spacing */
+    word-spacing: .15rem;  /* word spacing */
+}
+
+.acknowledgementsContainer a {  /* acknowledgements container links */
+    text-decoration: none;  /* text decoration (no underline) */
+    color: lightskyblue;  /* text color */
+    font-weight: bolder;  /* font weight */
+}
+
+
+
+/* ======================================================================
+
                                GLOBAL STYLES
                                  
    ====================================================================== */
@@ -281,6 +310,12 @@ h3.pageFooter {  /* footer text */
     font-size: 18px;  /* font size */
     text-align: center;  /* text alignment (center) */
     color: #fff;  /* text color */
+}
+
+footer a {  /* footer links */
+    text-decoration: none;  /* text decoration (no underline) */
+    color: lightskyblue;  /* text color */
+    font-weight: bolder;  /* font weight */
 }
 
 
