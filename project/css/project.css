@@ -94,6 +94,14 @@
     width: 50%;  /* width */
 }
 
+.thirdHeading {  /* third heading */
+    margin-right: 83%;  /* margin (right) */
+}
+
+.thirdHeading::after {  /* line after second heading (pseudo-element, child of 'body heading') */
+    width: 72%;  /* width */
+}
+
 
 /*  ---[[[ images ]]]---  */
 .roundImage {  /* round 'image cropping' container */
