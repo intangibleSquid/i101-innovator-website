@@ -1,0 +1,339 @@
+/* ======================================================================
+
+                                 INDEX.HTML
+
+   ====================================================================== */
+
+/*  ---[[[ body ]]]---  */
+.bodyContainer {  /* body containers */
+    background-color: #cccccc20;  /* background color (transluscent) */
+    width: 95%;  /* width (by percentage) */
+    margin: 0 auto;  /* margin (right/left and top/bottom) */
+    margin-block: 10px 20px;  /* block margin (top and bottom) */
+    text-align: center;  /* align text (center) */
+    border-radius: 6px;  /* rounded container edges */
+}
+
+.bodyHeading {  /* body headings */
+    display: inline-block;  /* display inline-block */
+    color: #fff;  /* text color */
+    font-family: 'Fira Code', 'Courier New', Courier, monospace;  /* font (with fallback fonts) */
+    font-size: 36px;  /* font size */
+    font-weight: bold;  /* font weight */
+    letter-spacing: .3rem;  /* font: spacing between letters */
+    padding-block: 4px;  /* block padding */
+    line-height: 0.1rem;  /* line height */
+    margin-top: 38px;  /* margin (top) */
+}
+
+.bodyHeading::after {  /* line after body headings (pseudo-element, child of 'body heading') */
+    display: inline-block;  /* display inline-block */
+    content: "";  /* empty content (horizontal line) */
+    height: 5px;  /* line height */
+    background: #3d0048;  /* line color */
+    position: absolute;  /* absolute position */
+    right: 110px;  /* spacing from the right of the page */
+}
+
+.bodySubheading {  /* body subheadings */
+    display: inline-block;  /* display inline-block */
+    color: #fff;  /* text color */
+    font-family: 'Fira Code', 'Courier New', Courier, monospace;  /* font (with fallback fonts) */
+    font-size: 28px;  /* font size */
+    font-weight: bold;  /* font weight */
+    letter-spacing: .3rem;  /* font: spacing between letters */
+    line-height: 0.1rem;  /* line height */
+}
+
+.bodySubheading::before, .bodySubheading::after {  /* lines before and after body subheadings (pseudo-elements, children of 'body subheadings' ) */
+    display: inline-block;  /* display inline-block */
+    content: "";  /* empty content (horizontal line) */
+    width: 180px;  /* line width */
+    height: 2px;  /* line height */
+    background: #3d0048;  /* line color */
+    margin-block: 6px;  /* block margin */
+    margin-inline: 20px;  /* inline margin */
+}
+
+.bodyContainer p {  /* body paragraphs */
+    color: #fff;  /* text color */
+    text-align: justify;  /* text alignment (justified) */
+    margin-inline: 20px;  /* inline margin */
+    padding-block: 6px 16px;  /* block padding (top and bottom) */
+    font-family: Arial, Helvetica, sans-serif;  /* font (with fallback fonts) */
+}
+
+.poem {  /* poem container */
+    color: #fff;  /* text color */
+    font-size: 20px;  /* font size */
+    font-family: 'Patrick Hand SC', Arial, Helvetica, sans-serif;  /* font (with fallback fonts) */
+    font-weight: lighter;  /* font weight */
+}
+
+.signature {  /* signature */
+    color: #fff;  /* text color */
+    font-family: 'Cedarville Cursive', 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;  /* font (with fallback fonts) */
+    font-size: 30px;  /* font size */
+    font-style: italic;  /* font style */
+    font-weight: lighter;  /* font weight */
+}
+
+.firstHeading {  /* first heading */
+    margin-right: 76%;  /* margin (right) */
+}
+
+.firstHeading::after {  /* line after first heading (pseudo-element, child of 'body heading') */
+    width: 65%;  /* width */
+}
+
+.secondHeading {  /* second heading */
+    margin-right: 58%;  /* margin (right) */
+}
+
+.secondHeading::after {  /* line after second heading (pseudo-element, child of 'body heading') */
+    width: 50%;  /* width */
+}
+
+
+/*  ---[[[ images ]]]---  */
+.roundImage {  /* round 'image cropping' container */
+    width: 100px;  /* width */
+    height: 100px;  /* height */
+    position: relative;  /* relative position */
+    overflow: hidden;  /* hide image overflow ('crop') */
+    border: #3d0048 3px solid;  /* border around image */
+    border-radius: 50%;  /* rounded corners ('circular') */
+    float: left;  /* float element to the left of the container */
+    margin-inline: 20px;  /* inline margin */
+    margin-block-start: 10px;  /* block margin (start) */
+    shape-outside: circle(64px);  /* AWESOME property that allows inline content to be 'wrapped' around element (in a circle) */
+}
+
+.roundImage img {  /* 'round' image ('cropped') */
+    display: inline-block;  /* display inline block */
+    margin: 0 auto;  /* margin (right/left and top/bottom) */
+    margin-inline-start: -16px;  /* inline margin (start) */
+    height: 100%;  /* height */
+    width: auto;  /* width */
+}
+
+.rectangularImage {  /* rectangular image (no 'crop' just resizing) */
+    display: block;  /* display block */
+    margin: 0 auto;  /* margin (right/left and top/bottom) */
+    float: left;  /* float element to the left of the container */
+    border: #3d0048 3px solid;  /* border around image */
+    border-radius: 2px;  /* rounded corners */
+    max-height: 495px;  /* max height of image (width scales) */
+    margin-inline: 20px;  /* inline margin */
+    margin-block: 20px;  /* block margin */
+}
+
+
+/*  -------------------------- TODO -------------------------- */
+/*  ---[[[ responsive design: phones ]]]---  */
+/* @media only screen and (max-width: 480px) {} */
+/* @media only screen and (max-width: 480px) and (orientation: landscape) {} -- necessary? might be a little too responsive... */
+
+/*  ---[[[ responsive design: tablets ]]]---  */
+/* @media only screen and (min-width:481px) and (max-width:768px) {} */
+/* NOTE TO SELF: CHANGE PIXEL TO '%' OR EM/REM MEASUREMENTS WHERE POSSIBLE */
+
+
+
+/* NOTE TO ANYONE ADDING TO THIS DOCUMENT: MAKE SURE YOUR CLASS NAMES ARE UNIQUE IF YOU DON'T WANT TO USE MINE */
+
+
+
+/* ======================================================================
+
+                           ACKNOWLEDGEMENTS.HTML
+
+   ====================================================================== */
+
+   /*  ---[[[ body ]]]---  */
+.acknowledgementsHeading {  /* acknowledgements heading */
+    margin-right: 1230px;  /* margin (right) */
+}
+
+.acknowledgementsHeading::after {  /* line after acknowledgements heading (pseudo-element, child of 'acknowledgements heading') */
+    width: 65%;  /* width */
+}
+
+.acknowledgementsContainer {  /* acknowledgements container */
+    line-height: 3rem;  /* line height */
+    letter-spacing: .005rem;  /* letter spacing */
+    word-spacing: .15rem;  /* word spacing */
+}
+
+.acknowledgementsContainer a {  /* acknowledgements container links */
+    text-decoration: none;  /* text decoration (no underline) */
+    color: lightskyblue;  /* text color */
+    font-weight: bolder;  /* font weight */
+}
+
+
+
+/* ======================================================================
+
+                               GLOBAL STYLES
+                                 
+   ====================================================================== */
+
+/*  ---[[[ page background ]]]---  */
+body.scrollingBackground {  /* scrolling background image */
+    background-image: url("images/background.png");  /* set a background image */
+    min-height: 100%;  /* set a minimum image height (for parallax scrolling effect -- STILL NEED TO ADD THIS EFFECT) */
+    background-attachment: fixed;  /* fixed image attachment */
+    background-position: center;  /* position image (center) -- STILL NEED TO ADD PARALLAX EFFECT */
+}
+
+
+/*  ---[[[ navbar ]]]---  */
+header {  /* header */
+    position: fixed;  /* fixed navbar to the top of the screen / viewport */
+    z-index: 10;  /* z-index (not sure if Skeleton utilizes the z-index, but I wanted the navbar on top of anything else) */
+    width: 100%;  /* width */
+    top: 0;  /* absolute position (top) */
+    left: 0;  /* absolute position (left) */
+}
+
+body {  /* body */
+    padding-top: 150px;  /* top padding (without this the fixed navbar will cover the page's content) */
+}
+
+.navbarContainer {  /* navbar container */
+    list-style-type: none;  /* remove numbering from ordered list */
+    padding: 0;  /* padding */
+    background-color: #570067;  /* navbar background color */
+    height: 150px;  /* height */
+    width: 100%;  /* width */
+}
+
+.navbarContainer .navbarImage {  /* navbar image */
+    max-height: 150px;  /* max height (width scales) */
+    margin: 0 0 0 -50px;  /* basically crops the image (pushes to the left of screen) */
+    overflow: hidden;  /* hide image overflow */
+}
+
+.navbarContainer .navbarHeading {  /* navbar heading */
+    position: fixed;  /* fixed position */
+    padding-top: 8px;  /* padding (top) */
+    padding-left: 166px;  /* padding (left) */
+    color: #fff;  /* text color */
+    font-family: 'Fira Code', 'Courier New', Courier, monospace;  /* font (with fallback fonts) */
+    font-size: 24px;  /* font size */
+    font-weight: bolder;  /* font weight */
+}
+
+.navbarContainer .navbarHeading .subHeading {  /* navbar subheading */
+    font-size: 16px;  /* font size */
+    font-weight: lighter;  /* font weight */
+}
+
+.navbarContainer .navLinkContainer {
+    position: fixed;  /* fixed position */
+    padding-top: 110px;  /* padding (top) */
+    padding-left: 10px;  /* padding (left) */
+    margin-left: 26px;  /* margin (left) */
+}
+
+.navbarContainer li {  /* navbar link list */
+    display: inline-block;  /* display inline block */
+}
+
+.navbarContainer li a {  /* navbar links */
+    display: inline-block;  /* display inline block */
+    width: auto;  /* width */
+    color: #fff;  /* text color */
+    text-decoration: none;  /* no link/anchor underline */
+    padding-inline: 16px;  /* inline padding */
+    padding-block: 8px;  /* block padding */
+    margin-block: -8px;  /* block margin */
+    font-family: 'Fira Code', 'Courier New', Courier, monospace;  /* font (with fallback fonts) */
+    font-size: 20px;  /* font size */
+}
+
+.navbarContainer li a:hover {  /* navbar links (hover effect) */
+    color: goldenrod;  /* text color */
+    background-color: #ffffff31;  /* background color ('highlight') */
+}
+
+.navbarContainer li a.active {  /* current page navbar link (add 'active' class to current page link in navbar HTML) */
+    color: gold  /* text color */
+    /* display: none; */ /* (COULD ALSO DO THIS, TRYING TO DECIDE IF I WANT TO) */
+}
+
+.fauxButton {  /* faux (fake) button */
+    display: inline-block;  /* display inline block */
+    width: auto;  /* width */
+    color: #fff;  /* text color */
+    cursor: pointer;  /* pointer cursor (the little hand thing) */
+    position: absolute;  /* absolute position */
+    font-size: 30px;  /* font size */
+    padding-top: 110px;  /* padding (top) */
+    padding-left: 10px;  /* padding (left) */
+}
+
+.fauxButton:hover {  /* faux (fake) button (hover effect) */
+    color: goldenrod;  /* font color */
+}
+
+.onPage {  /* "on page" rule (for JS) */
+    display: none;  /* display none */
+    /* display: inline-block; */  /* display inline block (REMOVE THIS - ADDED ELSEWHERE) */
+}
+
+.show {  /* 'show' rule (for JS) */
+    display: inline-block;  /* "show" navbar links with JavaScript */
+}
+
+.hide {  /* 'hide' rule (for JS) */
+    display: none;  /* "hide" navbar links with JavaScript */
+}
+
+
+/*  ---[[[ footer ]]]---  */
+footer {  /* footer */
+    margin-top: 20px;  /* margin (top) */
+    width: 100%;  /* width */
+}
+
+div.pageFooter {  /* footer container */
+    display: block;  /* display block */
+    background-color: #570067;  /* footer (background) color */
+    padding-top: 20px;  /* padding (top) */
+    padding-bottom: 2px;  /* padding (bottom) */
+}
+
+h3.pageFooter {  /* footer text */
+    font-family: 'Fira Code', 'Courier New', Courier, monospace;  /* font (with fallback fonts) */
+    font-size: 18px;  /* font size */
+    text-align: center;  /* text alignment (center) */
+    color: #fff;  /* text color */
+}
+
+footer a {  /* footer links */
+    text-decoration: none;  /* text decoration (no underline) */
+    color: lightskyblue;  /* text color */
+    font-weight: bolder;  /* font weight */
+}
+
+
+/*  ---[[[ fonts ]]]---  */
+@font-face {  /* import 'Fira Code' font */
+    font-family: "Fira Code";  /* font-family name */
+    src: url("fonts/Fira_Code/FiraCode-VariableFont_wght.ttf");  /* font file location */
+}
+
+@font-face {  /* import 'Cedarville Cursive' font */
+    font-family: "Cedarville Cursive";  /* font-family name */
+    src: url("fonts/Cedarville_Cursive/CedarvilleCursive-Regular.ttf");  /* font file location */
+}
+
+@font-face {  /* import 'Patrick Hand SC' font */
+    font-family: "Patrick Hand SC";  /* font-family name */
+    src: url("fonts/Patrick_Hand_SC/PatrickHandSC-Regular.ttf");  /* font file location */
+}
+
+/* NOTE TO SELF: STILL SOME THINGS LEFT TO DO
+NOTE TO OTHERS: IF YOU ADD RULES DO IT EITHER BELOW THIS LINE OR ABOVE THE 'GLOBAL STYLES' - ADD A HEADING PLEASE */

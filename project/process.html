@@ -1,0 +1,95 @@
+<html lang="en">  <!-- set HTML document language to English (en) - for browser translate functions -->
+    
+
+    <!-- Document Head (Metadata) -->
+    <head>
+
+        <!-- Page Attributes -->
+        <title> Deliverables </title>  <!-- webpage title -->
+        <link rel="icon" type="image/x-icon" href="images/favicon.ico">  <!-- set favicon -->
+        
+        <!-- Import CSS / JS Libraries -->
+        <link rel="stylesheet" href="css/project.css">  <!-- import global stylesheet -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">  <!-- import Skeleton framework -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">  <!-- import Font Awesome -->
+        <script src="js/project.js"></script>  <!-- import global scripts (for navbar) -->
+
+    </head>
+
+
+    <!-- Document Header (Navbar) -->
+    <header>  <!-- has custom styling to keep on top and stretch to page width -->
+
+        <div class="navbarContainer">  <!-- navbar container -->
+
+            <div class="row">  <!-- navbar row -->
+
+                <div class="one columns">  <!-- navbar image (navbar column) -->
+                    <img class="navbarImage" src="images/radia/radia1.png" alt="Radia Perlman at Podium">  <!-- navbar image (with alt text for increased accessibility) -->
+                </div>
+
+                <div class="row">  <!-- nested navbar row (inside another row) -->
+
+                    <div class="six columns navbarHeading">  <!-- navbar heading (navbar column) -->
+                        Radia Perlman PhD
+                        <br>  <!-- line break -->
+                        <span class="subHeading">"Mother of the Internet"</span>  <!-- navbar subheading -->
+                    </div>
+
+                    <div class="six columns">  <!-- navbar links (navbar column) -->
+                        
+                        <ol>  <!-- navbar links (ordered list) -->
+
+                            <a onclick="toggle_on_page_links()" class="fauxButton" id="expandNavlinks"><i class="fa fa-bars"></i></a>  <!-- faux button (link) to show navbar links -->
+
+                            <span id="onPageLinks" class="onPage">  <!-- hide-able navbar ("on page") links -->
+
+                                <a onclick="toggle_on_page_links()" class="fauxButton"><i id="expandNavlinks" class="fa fa-grip-lines-vertical"></i></a>  <!-- hidden: faux button (link) to hide navbar links -->
+                                <!-- using duplicate ID's is forbidden / bad practice! -- they're never on the DOM (Document Object Model) at the same time, and it made the JS a little easier, so I did it here (but don't!) -->
+
+                                <span class="navLinkContainer">  <!-- navbar links container -->
+
+                                    <li><a href="index.html">Home</a></li>  <!-- 'home' page link -->
+                                    <li><a class="active" href="process.html">Deliverables</a></li>  <!-- current ('active') page link -->
+                                    <li><a href="team.html">Team</a></li>  <!-- 'team' page link -->
+                                    <li><a href="acknowledgements.html">Acknowledgements</a></li>  <!-- 'acknowledgements' page link -->
+
+                                </span>  <!-- if you use this page as a template: change the 'active' tag to the new page's link above! -->
+
+                            </span>  <!-- this is probably bad practice too: the span / scripted anchor within the 'ol' tag (I'm not 100% sure though) -->
+
+                        </ol>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- Document Body (Content) -->
+    <body class="scrollingBackground">  <!-- set the scrolling background image for the document body -->
+
+        <!-- Content Block (First Container) -->
+        <div class="bodyContainer">  <!-- content container -->
+
+            
+           
+                        
+        </div>
+        
+    </body>
+
+
+    <!-- Document Footer (Footer) -->
+    <footer>
+        <div class="pageFooter">  <!-- footer container -->
+            <h3 class="pageFooter">I101 - Fall 2023&nbsp;|&nbsp;Layout by <a target="_blank" rel="noopener noreferrer" href="http://getskeleton.com">Skeleton</h3>  <!-- footer content -->
+        </div>
+    </footer>
+
+</html>
