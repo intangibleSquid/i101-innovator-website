@@ -146,72 +146,6 @@
 
 /* ======================================================================
 
-                                TEAM.HTML
-
-   ====================================================================== */
-
-/*  ---[[[ body ]]]---  */
-.teamContainer {
-    display: inline-block;
-    width: 45%;
-    margin-inline: 36px;
-    height: 20%
-}
-
-.containerRow {
-    text-align: center;
-}
-
-.teamHeading {
-    float: inline-start;
-}
-
-/* .teamHeading::after {
-    display: inline-block;
-    width: 10%;
-} */
-
-
-.roundImager {  /* round 'image cropping' container */
-    width: 100px;  /* width */
-    height: 100px;  /* height */
-    position: relative;  /* relative position */
-    overflow: hidden;  /* hide image overflow ('crop') */
-    border: #3d0048 3px solid;  /* border around image */
-    border-radius: 50%;  /* rounded corners ('circular') */
-    float: left;  /* float element to the left of the container */
-    margin-inline: 20px;  /* inline margin */
-    margin-block-start: 10px;  /* block margin (start) */
-    shape-outside: circle(64px);  /* AWESOME property that allows inline content to be 'wrapped' around element (in a circle) */
-    display: block;
-    clear: both;
-}
-
-.roundImager2 {  /* round 'image cropping' container */
-    width: 100px;  /* width */
-    height: 100px;  /* height */
-    position: relative;  /* relative position */
-    overflow: hidden;  /* hide image overflow ('crop') */
-    border: #3d0048 3px solid;  /* border around image */
-    border-radius: 50%;  /* rounded corners ('circular') */
-    float: right;  /* float element to the left of the container */
-    margin-inline: 20px;  /* inline margin */
-    margin-block-start: 10px;  /* block margin (start) */
-    shape-outside: circle(64px);  /* AWESOME property that allows inline content to be 'wrapped' around element (in a circle) */
-    display: block;
-    clear: both;
-}
-
-/* two columns? */
-/* image */
-/* responsive */
-/* process page */
-/* references */
-/* lines after text (better way) */
-/* make more uniform! */
-
-/* ======================================================================
-
                            ACKNOWLEDGEMENTS.HTML
 
    ====================================================================== */
@@ -247,7 +181,7 @@
 
 /*  ---[[[ page background ]]]---  */
 body.scrollingBackground {  /* scrolling background image */
-    background-image: url("../images/background.png");  /* set a background image */
+    background-image: url("images/background.png");  /* set a background image */
     min-height: 100%;  /* set a minimum image height (for parallax scrolling effect -- STILL NEED TO ADD THIS EFFECT) */
     background-attachment: fixed;  /* fixed image attachment */
     background-position: center;  /* position image (center) -- STILL NEED TO ADD PARALLAX EFFECT */
@@ -388,17 +322,17 @@ footer a {  /* footer links */
 /*  ---[[[ fonts ]]]---  */
 @font-face {  /* import 'Fira Code' font */
     font-family: "Fira Code";  /* font-family name */
-    src: url("../fonts/Fira_Code/FiraCode-VariableFont_wght.ttf");  /* font file location */
+    src: url("fonts/Fira_Code/FiraCode-VariableFont_wght.ttf");  /* font file location */
 }
 
 @font-face {  /* import 'Cedarville Cursive' font */
     font-family: "Cedarville Cursive";  /* font-family name */
-    src: url("../fonts/Cedarville_Cursive/CedarvilleCursive-Regular.ttf");  /* font file location */
+    src: url("fonts/Cedarville_Cursive/CedarvilleCursive-Regular.ttf");  /* font file location */
 }
 
 @font-face {  /* import 'Patrick Hand SC' font */
     font-family: "Patrick Hand SC";  /* font-family name */
-    src: url("../fonts/Patrick_Hand_SC/PatrickHandSC-Regular.ttf");  /* font file location */
+    src: url("fonts/Patrick_Hand_SC/PatrickHandSC-Regular.ttf");  /* font file location */
 }
 
 /* NOTE TO SELF: STILL SOME THINGS LEFT TO DO
