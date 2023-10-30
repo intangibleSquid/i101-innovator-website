@@ -102,6 +102,12 @@
     width: 72%;  /* width */
 }
 
+.bodyContainer a {  /* body container links */
+    text-decoration: none;  /* text decoration (no underline) */
+    color: lightskyblue;  /* text color */
+    font-weight: bolder;  /* font weight */
+}
+
 
 /*  ---[[[ images ]]]---  */
 .roundImage {  /* round 'image cropping' container */
@@ -137,18 +143,30 @@
 }
 
 
-/*  -------------------------- TODO -------------------------- */
-/*  ---[[[ responsive design: phones ]]]---  */
-/* @media only screen and (max-width: 480px) {} */
-/* @media only screen and (max-width: 480px) and (orientation: landscape) {} -- necessary? might be a little too responsive... */
-
-/*  ---[[[ responsive design: tablets ]]]---  */
-/* @media only screen and (min-width:481px) and (max-width:768px) {} */
-/* NOTE TO SELF: CHANGE PIXEL TO '%' OR EM/REM MEASUREMENTS WHERE POSSIBLE */
 
 
+/* ======================================================================
 
-/* NOTE TO ANYONE ADDING TO THIS DOCUMENT: MAKE SURE YOUR CLASS NAMES ARE UNIQUE IF YOU DON'T WANT TO USE MINE */
+                               PROCESS.HTML
+
+   ====================================================================== */
+
+/*  ---[[[ body ]]]---  */
+.processHeading {
+    margin-bottom: 30px;
+}
+
+.disabledLink {
+    pointer-events: none;
+    cursor: default;
+    opacity: 0.6;
+}
+
+
+/*  ---[[[ page todo ]]]---  */
+/* CONVERT TO LOOK MORE LIKE THE DELIVERABLES PAGE IN THE WIREFRAME BUT KEEP THIS SECTION AS EXPLANATION */
+/* INCLUDE IMAGES TOO (LIKE WEBSITE WIREFRAMES EXAMPLE) */
+
 
 
 
@@ -180,6 +198,7 @@
 } */
 
 
+/*  ---[[[ images ]]]---  */
 .roundImager {  /* round 'image cropping' container */
     width: 100px;  /* width */
     height: 100px;  /* height */
@@ -210,13 +229,18 @@
     clear: both;
 }
 
+
+/*  ---[[[ page todo ]]]---  */
 /* two columns? */
 /* image */
 /* responsive */
 /* process page */
 /* references */
-/* lines after text (better way) */
-/* make more uniform! */
+/* lines after text (better way, don't use pseudo-elements, use <hr>) */
+/* make more uniform */
+
+
+
 
 /* ======================================================================
 
@@ -244,6 +268,7 @@
     color: lightskyblue;  /* text color */
     font-weight: bolder;  /* font weight */
 }
+
 
 
 
@@ -409,5 +434,23 @@ footer a {  /* footer links */
     src: url("../fonts/Patrick_Hand_SC/PatrickHandSC-Regular.ttf");  /* font file location */
 }
 
-/* NOTE TO SELF: STILL SOME THINGS LEFT TO DO
-NOTE TO OTHERS: IF YOU ADD RULES DO IT EITHER BELOW THIS LINE OR ABOVE THE 'GLOBAL STYLES' - ADD A HEADING PLEASE */
+
+/*  -------------------------- GLOBAL TODO -------------------------- */
+/*  ---[[[ responsive design: phones ]]]---  */
+/* @media only screen and (max-width: 480px) {} */
+/* @media only screen and (max-width: 480px) and (orientation: landscape) {} -- necessary? might be a little too responsive... */
+
+/*  ---[[[ responsive design: tablets ]]]---  */
+/* @media only screen and (min-width:481px) and (max-width:768px) {} */
+/* NOTE TO SELF: CHANGE PIXEL TO '%' OR EM/REM MEASUREMENTS WHERE POSSIBLE */
+
+/* CRITICAL TO-DO */
+/* MAKE 'PROJECTS' SUB-DIRECTORY IN IMAGES DIRECTORY FOR PROJECT SCREENS - ADD RF IMAGE SOURCES TO ACKNOWLEDGEMENTS!!!!! */
+/* MAKE TEXT MORE READABLE - THE WHITE STARS IN THE BACKGROUND INTEREFERE SOMETIMES */
+/* ONLY IMPLEMENT HAMBURGER MENU FOR NAVBAR WHEN ON PHONE OR TABLET SCREEN, OTHERWISE ALWAYS SHOW NAVIGATION LINKS */
+/* MAKE SURE ALL IMAGES ON ALL PAGES HAVE ALT-TEXT */
+/* RESPONSIVE, MOBILE-FIRST DESIGN */
+/* ADD ARIA TAGS FOR ACCESSIBILITY? */
+/* COMMENT ALL PAGES / ALL CODE */
+
+/* NOTE TO ANYONE ADDING TO THIS DOCUMENT: MAKE SURE YOUR CLASS NAMES ARE UNIQUE IF YOU DON'T WANT TO USE MINE */
