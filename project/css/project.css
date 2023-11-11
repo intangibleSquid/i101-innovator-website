@@ -5,12 +5,17 @@
    ====================================================================== */
 
 /*  ---[[[ body ]]]---  */
+
+body {  /* html body */
+    margin: 0;  /* margin */
+}
+
 .bodyContainer {  /* body containers */
     background-color: #cccccc20;  /* background color (transluscent) */
     width: 95%;  /* width (by percentage) */
     margin: 0 auto;  /* margin (right/left and top/bottom) */
     margin-block: 10px 20px;  /* block margin (top and bottom) */
-    text-align: center;  /* align text (center) */
+    /* text-align: center;  /* align text (center) */
     border-radius: 6px;  /* rounded container edges */
 }
 
@@ -26,14 +31,6 @@
     margin-top: 38px;  /* margin (top) */
 }
 
-.bodyHeading::after {  /* line after body headings (pseudo-element, child of 'body heading') */
-    display: inline-block;  /* display inline-block */
-    content: "";  /* empty content (horizontal line) */
-    height: 5px;  /* line height */
-    background: #3d0048;  /* line color */
-    position: absolute;  /* absolute position */
-    right: 110px;  /* spacing from the right of the page */
-}
 
 .bodySubheading {  /* body subheadings */
     display: inline-block;  /* display inline-block */
@@ -45,15 +42,7 @@
     line-height: 0.1rem;  /* line height */
 }
 
-.bodySubheading::before, .bodySubheading::after {  /* lines before and after body subheadings (pseudo-elements, children of 'body subheadings' ) */
-    display: inline-block;  /* display inline-block */
-    content: "";  /* empty content (horizontal line) */
-    width: 180px;  /* line width */
-    height: 2px;  /* line height */
-    background: #3d0048;  /* line color */
-    margin-block: 6px;  /* block margin */
-    margin-inline: 20px;  /* inline margin */
-}
+
 
 .bodyContainer p {  /* body paragraphs */
     color: #fff;  /* text color */
@@ -61,6 +50,10 @@
     margin-inline: 20px;  /* inline margin */
     padding-block: 6px 16px;  /* block padding (top and bottom) */
     font-family: Arial, Helvetica, sans-serif;  /* font (with fallback fonts) */
+}
+
+.poemContainer {
+    text-align: center;
 }
 
 .poem {  /* poem container */
@@ -78,29 +71,19 @@
     font-weight: lighter;  /* font weight */
 }
 
-.firstHeading {  /* first heading */
-    margin-right: 76%;  /* margin (right) */
-}
-
-.firstHeading::after {  /* line after first heading (pseudo-element, child of 'body heading') */
-    width: 65%;  /* width */
-}
-
 .secondHeading {  /* second heading */
-    margin-right: 58%;  /* margin (right) */
+    /* margin-right: 58%;  /* margin (right) */
+    padding-left: 20px;
 }
 
-.secondHeading::after {  /* line after second heading (pseudo-element, child of 'body heading') */
-    width: 50%;  /* width */
-}
+
 
 .thirdHeading {  /* third heading */
-    margin-right: 83%;  /* margin (right) */
+    /* margin-right: 83%;  /* margin (right) */
+    padding-left: 20px;
 }
 
-.thirdHeading::after {  /* line after second heading (pseudo-element, child of 'body heading') */
-    width: 72%;  /* width */
-}
+
 
 .bodyContainer a {  /* body container links */
     text-decoration: none;  /* text decoration (no underline) */
@@ -142,8 +125,47 @@
     margin-block: 20px;  /* block margin */
 }
 
+@media screen and (min-width: 1451px) {
+    .bodyHeading::after {  /* line after body headings (pseudo-element, child of 'body heading') */
+        display: inline-block;  /* display inline-block */
+        content: "";  /* empty content (horizontal line) */
+        height: 5px;  /* line height */
+        background: #3d0048;  /* line color */
+        position: absolute;  /* absolute position */
+        right: 110px;  /* spacing from the right of the page */
+    }
+    
+    .bodySubheading::before, .bodySubheading::after {  /* lines before and after body subheadings (pseudo-elements, children of 'body subheadings' ) */
+        display: inline-block;  /* display inline-block */
+        content: "";  /* empty content (horizontal line) */
+        width: 180px;  /* line width */
+        height: 2px;  /* line height */
+        background: #3d0048;  /* line color */
+        margin-block: 6px;  /* block margin */
+        margin-inline: 20px;  /* inline margin */
+    }
 
+    .firstHeading::after {  /* line after first heading (pseudo-element, child of 'body heading') */
+        width: 65%;  /* width */
+    }
 
+    .secondHeading::after {  /* line after second heading (pseudo-element, child of 'body heading') */
+        width: 50%;  /* width */
+    }
+
+    .thirdHeading::after {  /* line after second heading (pseudo-element, child of 'body heading') */
+        width: 72%;  /* width */
+    }
+
+    
+}
+
+@media only screen and (max-width: 1450px) {
+    .bodySubheading::before, .bodySubheading::after {
+        display: none;
+    }
+
+}
 
 /* ======================================================================
 
@@ -152,14 +174,15 @@
    ====================================================================== */
 
 /*  ---[[[ body ]]]---  */
-.processHeading {
-    margin-bottom: 30px;
+.processHeading {  /* process heading */
+    margin-bottom: 30px;  /* margin (bottom) */
+    padding-left: 20px;
 }
 
-.disabledLink {
-    pointer-events: none;
-    cursor: default;
-    opacity: 0.6;
+.disabledLink {  /* disabled anchor / link */
+    pointer-events: none;  /* make link non-clickable */
+    cursor: default;  /* default cursor (don't use the pointer cursor) */
+    opacity: 0.6;  /* set opacity */
 }
 
 
@@ -178,10 +201,7 @@
 
 /*  ---[[[ body ]]]---  */
 .teamContainer {
-    display: inline-block;
-    width: 45%;
-    margin-inline: 36px;
-    height: 20%
+    text-align: center;
 }
 
 .containerRow {
@@ -250,7 +270,7 @@
 
    /*  ---[[[ body ]]]---  */
 .acknowledgementsHeading {  /* acknowledgements heading */
-    margin-right: 1230px;  /* margin (right) */
+    padding-left: 20px;
 }
 
 .acknowledgementsHeading::after {  /* line after acknowledgements heading (pseudo-element, child of 'acknowledgements heading') */
@@ -301,11 +321,12 @@ body {  /* body */
 }
 
 .navbarContainer {  /* navbar container */
+    position: relative;  /* relative position (so child elements can be placed absolutely or relatively) */
     list-style-type: none;  /* remove numbering from ordered list */
-    padding: 0;  /* padding */
+    /* padding: 0;  /* padding */
     background-color: #570067;  /* navbar background color */
     height: 150px;  /* height */
-    width: 100%;  /* width */
+    width: 100vw;  /* width */
 }
 
 .navbarContainer .navbarImage {  /* navbar image */
@@ -315,22 +336,24 @@ body {  /* body */
 }
 
 .navbarContainer .navbarHeading {  /* navbar heading */
-    position: fixed;  /* fixed position */
+    position: absolute;  /* absolute position */
     padding-top: 8px;  /* padding (top) */
     padding-left: 166px;  /* padding (left) */
     color: #fff;  /* text color */
     font-family: 'Fira Code', 'Courier New', Courier, monospace;  /* font (with fallback fonts) */
     font-size: 24px;  /* font size */
     font-weight: bolder;  /* font weight */
+    white-space: nowrap;
 }
 
 .navbarContainer .navbarHeading .subHeading {  /* navbar subheading */
+    position: absolute;
     font-size: 16px;  /* font size */
     font-weight: lighter;  /* font weight */
 }
 
 .navbarContainer .navLinkContainer {
-    position: fixed;  /* fixed position */
+    position: relative;  /* re position */
     padding-top: 110px;  /* padding (top) */
     padding-left: 10px;  /* padding (left) */
     margin-left: 26px;  /* margin (left) */
@@ -369,12 +392,19 @@ body {  /* body */
     cursor: pointer;  /* pointer cursor (the little hand thing) */
     position: absolute;  /* absolute position */
     font-size: 30px;  /* font size */
-    padding-top: 110px;  /* padding (top) */
-    padding-left: 10px;  /* padding (left) */
+    padding-top: 102px;  /* padding (top) */
+    padding-left: 15px;  /* padding (left) */
+    white-space: nowrap;
 }
 
 .fauxButton:hover {  /* faux (fake) button (hover effect) */
     color: goldenrod;  /* font color */
+}
+
+.triviaGame {  /* trivia game faux button position */
+    display: inline-block;
+    position: absolute;  /* absolute position */
+    right: 4%;  /* position (right) */
 }
 
 .onPage {  /* "on page" rule (for JS) */
@@ -390,11 +420,15 @@ body {  /* body */
     display: none;  /* "hide" navbar links with JavaScript */
 }
 
+.mobile-only {
+    display: none;
+}
+
 
 /*  ---[[[ footer ]]]---  */
 footer {  /* footer */
     margin-top: 20px;  /* margin (top) */
-    width: 100%;  /* width */
+    width: 100vw;  /* width */
 }
 
 div.pageFooter {  /* footer container */
@@ -434,6 +468,31 @@ footer a {  /* footer links */
     src: url("../fonts/Patrick_Hand_SC/PatrickHandSC-Regular.ttf");  /* font file location */
 }
 
+@media only screen and (max-width: 1450px) {
+    .desktop-only {
+        display: none;
+    }
+
+    .mobile-only {
+        display: inline-block;
+    }
+
+    .navButtonContainer {
+        display: block;
+        position: absolute;
+        white-space: nowrap;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 20px;
+    }
+
+    .navButton {
+        position: relative;
+        display: inline-block;
+        padding: 10px;
+    }
+}
 
 /*  -------------------------- GLOBAL TODO -------------------------- */
 /*  ---[[[ responsive design: phones ]]]---  */
@@ -455,3 +514,4 @@ footer a {  /* footer links */
 /* REMOVE INLINE STYLING */
 
 /* NOTE TO ANYONE ADDING TO THIS DOCUMENT: MAKE SURE YOUR CLASS NAMES ARE UNIQUE IF YOU DON'T WANT TO USE MINE */
+/* REMOVE EXTRA COMMENTS PRIOR TO PRODUCTION / SUBMISSION */
