@@ -252,6 +252,14 @@ body {  /* body elements */
     padding-left: 20px;  /* padding (left) */
 }
 
+.finalNote {  /* final note text */
+    font-weight: bold;  /* font weight */
+    text-align: center;  /* text alignment (center) */
+    font-family: 'Patrick Hand SC', Arial, Helvetica, sans-serif;  /* font (with fallback fonts) */
+    color: #fff;  /* text color */
+    font-size: 22px;  /* font size */
+}
+
 
 /*  ---[[[ deprecated rules ]]]---  */
 .disabledLink {  /* disabled anchor / link */
@@ -269,6 +277,14 @@ body {  /* body elements */
         text-align: center;  /* center heading */
         font-size: auto;  /* auto font size */
         margin-inline-start: -20px;  /* near-center heading */
+    }
+
+    .finalNote {  /* final note text */
+        font-size: 16px;  /* font size */
+    }
+
+    .finalNote .signature {  /* final note signature */
+        font-size: 18px;  /* font size */
     }
 
 }
