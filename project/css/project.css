@@ -189,8 +189,9 @@ body {  /* body elements */
             padding-block-start: 25px;  /* padding block (start) */
             text-align: center;  /* text alignment (center) */
             font-size: 34px;  /* enlarge font */
-            word-spacing: space;  /* add spacing between words */
+            margin-inline-start: -5%;
             margin-block-end: 0;  /* remove space between photo and heading */
+            
         }
 
         .thirdHeading {  /* third heading */
@@ -198,11 +199,40 @@ body {  /* body elements */
             margin-block-end: 26px;  /* margin block (end) */
         }
 
+        .lastHeading {  /* last heading */
+            margin-inline: calc(50% - 28.9vw);  /* calculated inline margin (near-center) */
+        }
+
+        .bodyHeading {  /* body heading */
+            font-size: 26px;  /* reduce font size */
+        }
+
+        .bodyContainer {  /* body container */
+            position: relative;  /* relative position (to arrange children) */
+        }
+
         .rectImageContainer {  /* container for rectangular image */
             display: block;  /* display block */
             padding-inline: 56px;  /* padding inline */
+            text-align: center;  /* text alignment (center) */
+            position: absolute;  /* absolute position (CENTER) */
+            margin-top: 260px;  /* margin (top) */
+            left: 50%;  /* CENTER */
+            -webkit-transform: translate(-50%, -50%);  /* CENTER */
+            -moz-transform: translate(-50%, -50%);  /* CENTER */
+            -ms-transform: translate(-50%, -50%);  /* CENTER */
+            -o-transform: translate(-50%, -50%);  /* CENTER */
+            transform: translate(-50%, -50%);  /* CENTER */
         }
-        
+
+        .bodyContainer .contributionText {  /* contribution text */
+            margin-top: 526px;  /* move below image (image removed from document flow due to absolute position) */
+        }
+
+        .bodyContainer p a {  /* body paragraph links */
+            font-size: 14px;  /* reduce font size */
+        }
+
     }
 
 }
@@ -238,9 +268,11 @@ body {  /* body elements */
         line-height: 1.2em;  /* reset line spacing */
         text-align: center;  /* center heading */
         font-size: auto;  /* auto font size */
+        margin-inline-start: -20px;  /* near-center heading */
     }
 
 }
+
 
 
 
@@ -292,6 +324,21 @@ body {  /* body elements */
 }
 
 
+/*  ---[[[ responsive design: 'mobile device' breakpoint ]]]---  */
+@media screen and (max-width: 549px) {  /* screen has a maximum width of 549px */
+
+    .imageBug {  /* process heading */
+        margin-top: calc(10% + 4.2vh);  /* calculate top margin */
+        margin-block-end: 60px;  /* margin block (end) */
+    }
+
+    .teamContainer {  /* team heading */
+        text-align: center;  /* text alignment (center) */
+    }
+
+}
+
+
 
 
 /* ======================================================================
@@ -319,6 +366,16 @@ body {  /* body elements */
     text-decoration: none;  /* text decoration (no underline) */
     color: lightskyblue;  /* text color */
     font-weight: bolder;  /* font weight */
+}
+
+
+/*  ---[[[ responsive design: 'mobile device' breakpoint ]]]---  */
+@media screen and (max-width: 549px) {  /* screen has a maximum width of 549px */
+
+    .acknowledgementsContainer {  /* acknowledgements container */
+        text-align: center;  /* text alignment (center) */
+    }
+
 }
 
 
@@ -454,6 +511,33 @@ body {  /* body */
 }
 
 
+/*  ---[[[ footer ]]]---  */
+footer {  /* footer */
+    margin-top: 20px;  /* margin (top) */
+    width: 100vw;  /* width */
+}
+
+div.pageFooter {  /* footer container */
+    display: block;  /* display block */
+    background-color: #570067;  /* footer (background) color */
+    padding-top: 20px;  /* padding (top) */
+    padding-bottom: 2px;  /* padding (bottom) */
+}
+
+h3.pageFooter {  /* footer text */
+    font-family: 'Fira Code', 'Courier New', Courier, monospace;  /* font (with fallback fonts) */
+    font-size: 18px;  /* font size */
+    text-align: center;  /* text alignment (center) */
+    color: #fff;  /* text color */
+}
+
+footer a {  /* footer links */
+    text-decoration: none;  /* text decoration (no underline) */
+    color: lightskyblue;  /* text color */
+    font-weight: bolder;  /* font weight */
+}
+
+
 /*  ---[[[ responsive design: 'second' breakpoint ]]]---  */
 @media only screen and (max-width: 1450px) {  /* screen has a maximum width of 1450px */
     
@@ -490,36 +574,38 @@ body {  /* body */
             top: -156px;  /* push back to the proper location */
             left: 120px;  /* push back to the proper location */
         }  /* this was a 'hacky' fix, but it worked, at the end of the day (WOO Skeleton, that 'row' kept overflowing) */
+
+        .navbarContainer li a {  /* navbar anchor links */
+            font-size: 16px;  /* shrink font size */
+            padding-inline: 10px;  /* reduce inline padding */
+            padding-top: 16px;  /* increase top padding */
+        }
+
+        .navbarContainer .navbarHeading {  /* navbar heading */
+            font-size: 18px;  /* reduce font size */
+        }
+
+       .navbarContainer .navbarHeading .subHeading {  /* navbar subheading */
+            font-size: 12px;  /* reduce font size */
+       }
+
+       footer h3.pageFooter {  /* footer text */
+            font-size: 16px;  /* reduce font size */
+       }
         
     }
 
 }
 
 
-/*  ---[[[ footer ]]]---  */
-footer {  /* footer */
-    margin-top: 20px;  /* margin (top) */
-    width: 100vw;  /* width */
-}
+/*  ---[[[ responsive design: landscape ]]]---  */
+@media screen and (orientation: landscape) {
 
-div.pageFooter {  /* footer container */
-    display: block;  /* display block */
-    background-color: #570067;  /* footer (background) color */
-    padding-top: 20px;  /* padding (top) */
-    padding-bottom: 2px;  /* padding (bottom) */
-}
-
-h3.pageFooter {  /* footer text */
-    font-family: 'Fira Code', 'Courier New', Courier, monospace;  /* font (with fallback fonts) */
-    font-size: 18px;  /* font size */
-    text-align: center;  /* text alignment (center) */
-    color: #fff;  /* text color */
-}
-
-footer a {  /* footer links */
-    text-decoration: none;  /* text decoration (no underline) */
-    color: lightskyblue;  /* text color */
-    font-weight: bolder;  /* font weight */
+    html, body {  /* html and body (prevent horizontal scrolling) */
+        max-width: 100%;  /* set max-width to 100% */
+        overflow-x: hidden;  /* hide horizontal overflow */
+    }
+    
 }
 
 
