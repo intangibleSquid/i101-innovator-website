@@ -1,8 +1,13 @@
+<!DOCTYPE html>
 <html lang="en">  <!-- set HTML document language to English (en) - for browser translate functions -->
     
 
     <!-- Document Head (Metadata) -->
     <head>
+
+        <!-- Meta Tags -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <!-- Page Attributes -->
         <title> Team </title>  <!-- webpage title -->
@@ -33,30 +38,50 @@
                     <div class="six columns navbarHeading">  <!-- navbar heading (navbar column) -->
                         Radia Perlman PhD
                         <br>  <!-- line break -->
-                        <span class="subHeading">"Mother of the Internet"</span>  <!-- navbar subheading -->
+                        <div class="subHeading">"Mother of the Internet"</div>  <!-- navbar subheading -->
                     </div>
 
-                    <div class="six columns">  <!-- navbar links (navbar column) -->
+                    <div class="six columns desktop-only">  <!-- navbar links (navbar column) -->
                         
                         <ol>  <!-- navbar links (ordered list) -->
 
                             <a onclick="toggle_on_page_links()" class="fauxButton" id="expandNavlinks"><i class="fa fa-bars"></i></a>  <!-- faux button (link) to show navbar links -->
 
-                            <span id="onPageLinks" class="onPage">  <!-- hide-able navbar ("on page") links -->
+                            <div id="onPageLinks" class="onPage">  <!-- hide-able navbar ("on page") links -->
 
                                 <a onclick="toggle_on_page_links()" class="fauxButton"><i id="expandNavlinks" class="fa fa-grip-lines-vertical"></i></a>  <!-- hidden: faux button (link) to hide navbar links -->
                                 <!-- using duplicate ID's is forbidden / bad practice! -- they're never on the DOM (Document Object Model) at the same time, and it made the JS a little easier, so I did it here (but don't!) -->
 
-                                <span class="navLinkContainer">  <!-- navbar links container -->
+                                <div class="navLinkContainer">  <!-- navbar links container -->
 
                                     <li><a href="index.html">Home</a></li>  <!-- 'home' page link -->
                                     <li><a href="process.html">Deliverables</a></li>  <!-- 'deliverables' page link -->
                                     <li><a class="active" href="team.html">Team</a></li>  <!-- current ('active') page link -->
                                     <li><a href="acknowledgements.html">Acknowledgements</a></li>  <!-- 'acknowledgements' page link -->
 
-                                </span>  <!-- if you use this page as a template: change the 'active' tag to the new page's link above! -->
+                                </div>  <!-- if you use this page as a template: change the 'active' tag to the new page's link above! -->
 
-                            </span>  <!-- this is probably bad practice too: the span / scripted anchor within the 'ol' tag (I'm not 100% sure though) -->
+                            </div>
+
+                            <div class="triviaGame">  <!-- trivia app (button) -->
+                                <a class="fauxButton" onclick="trivia_app_popup()"><i class="fa fa-gamepad"></i></a>
+                            </div>
+
+                        </ol>
+
+                    </div>
+
+                    <div class="six columns mobile-only">  <!-- navbar links (navbar column) [ONLY ON < 1400px RESOLUTION] -->
+                        
+                        <ol>  <!-- navbar links (ordered list) -->
+
+                            <div class="navLinkContainer navButtonContainer">  <!-- navbar links container -->
+                                <li><a class="fauxButton navButton" href="index.html"><i class="fa fa-home"></i></a></li>
+                                <li><a class="fauxButton navButton" href="process.html"><i class="fa fa-chalkboard-user"></i></a></li>
+                                <li><a class="fauxButton navButton active" href="team.html"><i class="fa fa-people-group"></i></a></li>
+                                <li><a class="fauxButton navButton" href="acknowledgements.html"><i class="fa fa-book"></i></a></li>
+                                <li><a class="fauxButton navButton" onclick="trivia_app_popup()"><i class="fa fa-gamepad"></i></a></li>
+                            </div>
 
                         </ol>
 
@@ -75,7 +100,7 @@
     <body class="scrollingBackground">  <!-- set the scrolling background image for the document body -->
 
             <!-- Content Block (First Container) -->
-            <div class="bodyContainer">  <!-- content container -->
+            <div class="bodyContainer teamContainer">  <!-- content container -->
 
                     <h1 class="bodyHeading">Jumanah Amoudi</h1>  <!-- content heading -->
                     
@@ -86,35 +111,36 @@
                     </div>  
 
                     <p>  <!-- content paragraph -->
-                        <br><br style="line-height: 0.4em;">  <!-- line breaks (one with custom spacing) -->
+                        <br><br class="thirdBreak">  <!-- line breaks (one with custom spacing) -->
                         Studying Human Resources Management as an Undergraduate at Indiana University Bloomington. An aspiring manager, 
                         she has goals to enhance the work environment to be as comfortable, motivating, and worthwhile as possible.
-
-                        <br>  <!-- line break -->
+                        <br><br class="thirdBreak">  <!-- line breaks (one with custom spacing) -->
                     </p>
                                 
             </div>
 
-            <div class="bodyContainer">  <!-- content container -->
+            <div class="bodyContainer teamContainer">  <!-- content container -->
                 
                 <h1 class="bodyHeading">Cameron Coy</h1>  <!-- content heading -->
-                <div class="roundImager2">  <!-- image cropping 'container' -->
+
+                <div class="roundImager2 imageBug">  <!-- image cropping 'container' -->
                     
                     <img src="images/team/cameron.jpg" alt="Cameron Coy Photo" width="100%">  <!-- image (with alt text for increased accessibility) -->
                 
                 </div>  
 
                 <p>  <!-- content paragraph -->
-                    <br><br style="line-height: 0.4em;">  <!-- line breaks (one with custom spacing) -->
+                    <br><br class="thirdBreak">  <!-- line breaks (one with custom spacing) -->
                     First year transfer student at Indiana University Bloomington. He is pursuing his B.S. in Cybersecurity
                     and Global Policy with a minor in Intelligence Studies and a Certificate in Advanced Chinese Language and Culture.
-                    <br>  <!-- line break -->
+                    <br><br class="thirdBreak">  <!-- line breaks (one with custom spacing) -->
                 </p>
                             
             </div>
 
 
-            <div class="bodyContainer">  <!-- content container -->
+            <div class="bodyContainer teamContainer">  <!-- content container -->
+
                 <h1 class="bodyHeading">Rioof Albedair</h1>  <!-- content heading -->
 
                 <div class="roundImager">  <!-- image cropping 'container' -->
@@ -124,14 +150,16 @@
                 </div>  
 
                 <p>  <!-- content paragraph -->
-                    <br><br style="line-height: 0.4em;">  <!-- line breaks (one with custom spacing) -->
+                    <br><br class="thirdBreak">  <!-- line breaks (one with custom spacing) -->
                     Freshman majoring in Cybersecurity and Global Policy at Indiana University. She is interested in filmmaking, film criticism, and psychology.
                     Her goal is to be successful in her social and career life.
+                    <br><br class="thirdBreak">  <!-- line breaks (one with custom spacing) -->
                 </p>
                             
             </div>
 
-            <div class="bodyContainer">  <!-- content container -->
+            <div class="bodyContainer teamContainer">  <!-- content container -->
+
                 <h1 class="bodyHeading">Daniel Barbaric</h1>  <!-- content heading -->
 
                 <div class="roundImager2">  <!-- image cropping 'container' -->
@@ -141,10 +169,11 @@
                 </div>  
 
                 <p>  <!-- content paragraph -->
-                    <br><br style="line-height: 0.4em;">  <!-- line breaks (one with custom spacing) -->
+                    <br><br class="thirdBreak">  <!-- line breaks (one with custom spacing) -->
                     From Arlington Heights, Illinions, is attending Indiana University where he is majoring in Informatics.
                     He enjoys hanging out with his friends, playing video games, and playing Soccer and other sports.
                     Every summer he meets his family in Croatia, which is his favorite place in the world. 
+                    <br><br class="thirdBreak">  <!-- line breaks (one with custom spacing) -->
                 </p>
                             
             </div>
