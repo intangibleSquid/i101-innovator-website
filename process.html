@@ -1,8 +1,13 @@
+<!DOCTYPE html>
 <html lang="en">  <!-- set HTML document language to English (en) - for browser translate functions -->
     
 
     <!-- Document Head (Metadata) -->
     <head>
+
+        <!-- Meta Tags -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <!-- Page Attributes -->
         <title> Deliverables </title>  <!-- webpage title -->
@@ -33,30 +38,50 @@
                     <div class="six columns navbarHeading">  <!-- navbar heading (navbar column) -->
                         Radia Perlman PhD
                         <br>  <!-- line break -->
-                        <span class="subHeading">"Mother of the Internet"</span>  <!-- navbar subheading -->
+                        <div class="subHeading">"Mother of the Internet"</div>  <!-- navbar subheading -->
                     </div>
 
-                    <div class="six columns">  <!-- navbar links (navbar column) -->
+                    <div class="six columns desktop-only">  <!-- navbar links (navbar column) -->
                         
                         <ol>  <!-- navbar links (ordered list) -->
 
                             <a onclick="toggle_on_page_links()" class="fauxButton" id="expandNavlinks"><i class="fa fa-bars"></i></a>  <!-- faux button (link) to show navbar links -->
 
-                            <span id="onPageLinks" class="onPage">  <!-- hide-able navbar ("on page") links -->
+                            <div id="onPageLinks" class="onPage">  <!-- hide-able navbar ("on page") links -->
 
                                 <a onclick="toggle_on_page_links()" class="fauxButton"><i id="expandNavlinks" class="fa fa-grip-lines-vertical"></i></a>  <!-- hidden: faux button (link) to hide navbar links -->
                                 <!-- using duplicate ID's is forbidden / bad practice! -- they're never on the DOM (Document Object Model) at the same time, and it made the JS a little easier, so I did it here (but don't!) -->
 
-                                <span class="navLinkContainer">  <!-- navbar links container -->
+                                <div class="navLinkContainer">  <!-- navbar links container -->
 
                                     <li><a href="index.html">Home</a></li>  <!-- 'home' page link -->
                                     <li><a class="active" href="process.html">Deliverables</a></li>  <!-- current ('active') page link -->
                                     <li><a href="team.html">Team</a></li>  <!-- 'team' page link -->
                                     <li><a href="acknowledgements.html">Acknowledgements</a></li>  <!-- 'acknowledgements' page link -->
 
-                                </span>  <!-- if you use this page as a template: change the 'active' tag to the new page's link above! -->
+                                </div>  <!-- if you use this page as a template: change the 'active' tag to the new page's link above! -->
 
-                            </span>  <!-- this is probably bad practice too: the span / scripted anchor within the 'ol' tag (I'm not 100% sure though) -->
+                            </div>
+
+                            <div class="triviaGame">  <!-- trivia app (button) -->
+                                <a class="fauxButton" onclick="trivia_app_popup()"><i class="fa fa-gamepad"></i></a>
+                            </div>
+
+                        </ol>
+
+                    </div>
+
+                    <div class="six columns mobile-only">  <!-- navbar links (navbar column) [ONLY ON < 1400px RESOLUTION] -->
+                        
+                        <ol>  <!-- navbar links (ordered list) -->
+
+                            <div class="navLinkContainer navButtonContainer">  <!-- navbar links container -->
+                                <li><a class="fauxButton navButton" href="index.html"><i class="fa fa-home"></i></a></li>
+                                <li><a class="fauxButton navButton active" href="process.html"><i class="fa fa-chalkboard-user"></i></a></li>
+                                <li><a class="fauxButton navButton" href="team.html"><i class="fa fa-people-group"></i></a></li>
+                                <li><a class="fauxButton navButton" href="acknowledgements.html"><i class="fa fa-book"></i></a></li>
+                                <li><a class="fauxButton navButton" onclick="trivia_app_popup()"><i class="fa fa-gamepad"></i></a></li>
+                            </div>
 
                         </ol>
 
@@ -80,35 +105,106 @@
             <h1 class="bodyHeading processHeading">Digital Campaign Process</h1>  <!-- content heading -->
 
             <p>  <!-- content paragraph -->
-                The first thing that our group created were digital artifacts to represent Radia Perlman. We created posts with outlines from Instagram, Facebook, and Twitter. 
-                A link to view these artifacts is below.
-                <br>&emsp;
-                <a target="_blank" rel="noopener noreferrer" href="https://xd.adobe.com/view/3317ac1d-c1f9-4e17-b079-60c00d80f0ec-6644/">Digital Artifacts</a>
-                <br><br style="line-height: 0.4em;">  <!-- line breaks (one with custom spacing) -->
-                The second step for our group was to make a project wireframe. Our wireframes provide information about Radia Perlman and information about us, the creators. 
-                A link to our project wireframes is below.
-                <br>&emsp;
-                <a target="_blank" rel="noopener noreferrer" href="https://xd.adobe.com/view/47cf64d3-bb15-49f3-8cd3-f51ee6b67554-129c/">Project Wireframes</a>
-                <br><br style="line-height: 0.4em;">  <!-- line breaks (one with custom spacing) -->
-                The third step for our group project was to create a survey. The survey asks the typical survey questions, and more questions that are specific to our Digital 
-                Artifacts from step 1. You can take a look at our survey at the link below.
-                <br>&emsp;
-                <a target="_blank" rel="noopener noreferrer" href="https://forms.gle/SsqUpRjxHG5rANNe9/">Survey</a>
-                <br><br style="line-height: 0.4em;">  <!-- line breaks (one with custom spacing) -->
-                The fourth step our group did was to send out our survey. We sent the survey to as many people as possible, and recorded their responses on an Excel spreadsheet. We also
-                cleaned the data and created some minor data visualizations.
-                <br>&emsp;
-                <a target="_blank" rel="noopener noreferrer" href="files/I101-Group01-Responses-Cleaned.xlsx">Survey Data</a>
-                <br><br style="line-height: 0.4em;">  <!-- line breaks (one with custom spacing) -->
-                Our group did further exercises in data visualization by using Google's Looker Studio. We created some simple data visualizations based on PEW Research Survey Data.
-                To view these Data Visualizations, follow the link below.
-                <br>&emsp;
-                <a target="_blank" rel="noopener noreferrer" href="https://lookerstudio.google.com/reporting/7e328847-7aed-4e22-b5a4-60401224bbbc/">Data Visualization</a>
-                <br><br style="line-height: 0.4em;">  <!-- line breaks (one with custom spacing) -->
-                Finally, we launched our Digital Campaign for Radia Perlman. While we haven't gotten to this step yet, once we do, you can view our Artifacts at the link below.
-                <br>&emsp;
-                <a class="disabledLink" target="_blank" rel="noopener noreferrer" href="#">Digital Campaign</a>
-                <br><br style="line-height: 0.4em;">  <!-- line breaks (one with custom spacing) -->
+                <!-- Individual Digital Artifacts -->
+                Prior to creating our group's Digital Artifacts to promote Radia Perlman, we learned how to use Adobe XD to create prototype social media posts (Facebook, Instagram, and Twitter).
+                We compiled our Individual Digital Artifacts into a single document and have linked them below (we highlighted Clarence “Skip” Ellis in our individual artifacts, another underrepresented
+                innovator in technology).
+                <br>
+                <a class="disabledLink" target="_blank" rel="noopener noreferrer" href="#">Individual Digital Artifacts</a>
+                <br><br class="thirdBreak">  <!-- line breaks (one with custom spacing) -->
+
+                <!-- Group Digital Artifacts -->
+                The first thing that we did as a group was to create Digital Artifacts to represent Radia Perlman, an underrepresented innovator in technology that we chose to highlight with our group's
+                Digital Campaign. We created prototype posts with outlines from Instagram, Facebook, and Twitter. A link to view our group's Digital Artifacts is below.
+                <br>
+                <a target="_blank" rel="noopener noreferrer" href="https://xd.adobe.com/view/3317ac1d-c1f9-4e17-b079-60c00d80f0ec-6644/">Group Digital Artifacts</a>
+                <br><br class="thirdBreak">  <!-- line breaks (one with custom spacing) -->
+
+                <!-- Website Wireframe -->
+                The second step for our group was to create a Website Wireframe for our project. Our Website Wireframe provides information about Radia Perlman and information about us, the creators of this website, 
+                and the minds behind our Digital Campaign to highlight Radia Perlman. We also used this wireframe as a prototype for this website, and you'll notice the design of this website is very similar to our 
+                Website Wireframe linked below.
+                <br>
+                <a target="_blank" rel="noopener noreferrer" href="https://xd.adobe.com/view/47cf64d3-bb15-49f3-8cd3-f51ee6b67554-129c/">Website Wireframe</a>
+                <br><br class="thirdBreak">  <!-- line breaks (one with custom spacing) -->
+
+                <!-- Original Survey -->
+                Our third step as a group was to create a Survey to get feedback on our group's original Digital Artifacts. Our Survey asks typical survey questions, and more questions that are specific to our group's 
+                Digital Artifacts promoting Radia Perlman. You can take a look at our Survey at the link below (you can also take our original Survey at the link below too).
+                <br>
+                <a target="_blank" rel="noopener noreferrer" href="https://forms.gle/SsqUpRjxHG5rANNe9/">Original Survey</a>
+                <br><br class="thirdBreak">  <!-- line breaks (one with custom spacing) -->
+
+                <!-- Survey Data (Cleaned) -->
+                The fourth step our group took was to send out our survey for consideration. We sent the survey to as many people as possible and recorded their responses in a Microsoft Excel spreadsheet. We also
+                cleaned the respondents' data and created some minor data visualizations in our Excel spreadsheet. You can find our Cleaned Survey Data at the link below.
+                <br>
+                <a target="_blank" rel="noopener noreferrer" href="files/I101-Group01-Responses-Cleaned.xlsx">Survey Data (Cleaned)</a>
+                <br><br class="thirdBreak">  <!-- line breaks (one with custom spacing) -->
+
+                <!-- PEW Data Visualization -->
+                Our group did further exercises in data visualization using Google's Looker Studio. We created some simple Data Visualizations based on PEW Research Survey Data as well as a simple Digital Dashboard 
+                containing more data visualizations composed in a compelling and accessible manner. To view our PEW Data Visualizations, click the link below.
+                <br>
+                <a target="_blank" rel="noopener noreferrer" href="https://lookerstudio.google.com/reporting/7e328847-7aed-4e22-b5a4-60401224bbbc/">PEW Data Visualization</a>
+                <br><br class="thirdBreak">  <!-- line breaks (one with custom spacing) -->
+
+                <!-- Survey Data Visualizations -->
+                Before our Digital Campaign highlighting Radia Perlman went live, we took the skills that we learned throughout this course and put them to use creating Data Visualizations in both Microsoft Excel 
+                and Google's Looker Studio. We created a Pivot Table in Excel and another Digital Dashboard in Looker Studio using our initial Survey response data. We linked the Excel file for our Survey Data Visualization, 
+                our Google Looker Studio Survey Data Digital Dashboard, and PDF Documentation containing explanations on how and why we created the Data Visualizations that we did below. 
+                <br>
+                <a target="_blank" rel="noopener noreferrer" href="files/survey-data-vis.xlsx">Survey Data Visualization</a>
+                <span class="desktop-only">&nbsp;|&nbsp;</span>  <!-- spacer (desktop only) -->
+                <br class="mobile-only">  <!-- line break (mobile only) -->
+                <a class="disabledLink" target="_blank" rel="noopener noreferrer" href="#">Survey Data Digital Dashboard</a>
+                <span class="desktop-only">&nbsp;|&nbsp;</span>  <!-- spacer (desktop only) -->
+                <br class="mobile-only">  <!-- line break (mobile only) -->
+                <a target="_blank" rel="noopener noreferrer" href="files/data-vis-documentation.pdf">Data Visualization Documentation (PDF)</a>
+                <br><br class="thirdBreak">  <!-- line breaks (one with custom spacing) -->
+
+                <!-- Group Presentation -->
+                Our final step before launching our Digital Campaign was to present our process and various deliverables (many of which are included on this page) to our I101: Introduction to Informatics class. We learned a lot 
+                throughout this course, and this Digital Campaign project was a culmination of those skills, as well as an opportunity to work together as a group and get to know our classmates. We wrapped up our semester
+                together by creating a Microsoft PowerPoint Presentation and presenting it to our classmates during the last week of labs for this course. We converted our Group Presentation to a PDF document and have linked it below.   
+                <br>
+                <a target="_blank" rel="noopener noreferrer" href="files/final-presentation.pdf">Group Presentation</a>
+                <br><br class="thirdBreak">  <!-- line breaks (one with custom spacing) -->
+
+                <!-- Updated Survey -->
+                Finally, we officially launched our Digital Campaign for Radia Perlman (which consisted of three main steps)! The first of these steps was to update our Survey based on feedback that we received from our Original 
+                Survey in Step 3. We appreciated the time that everyone spent responding to our original Survey, so we considered their feedback and created an Updated Survey to gather feedback on our Digital Campaign
+                after it went live. Our Updated Survey can be found at the link below (please take the time to take our Updated Survey at this link too, we really appreciate your time and feedback)!
+                <br>
+                <a class="disabledLink" target="_blank" rel="noopener noreferrer" href="#">Updated Survey</a>
+                <br><br class="thirdBreak">  <!-- line breaks (one with custom spacing) -->
+
+                <!-- Final Digital Artifacts -->
+                Our next step in the process of launching our Digital Campaign was to update our Digital Artifacts based on feedback we received in our initial Survey and begin posting them to our social media pages. You can find
+                our Final Digital Artifacts compiled into a PDF document at the link below (and if you know us in real life, you might just see them in our social media feeds in the coming days).
+                <br>
+                <a target="_blank" rel="noopener noreferrer" href="files/final-digital-artifacts.pdf">Final Digital Artifacts</a>
+                <br><br class="thirdBreak">  <!-- line breaks (one with custom spacing) -->
+
+                <!-- Final Website Submission (GitHub) -->
+                Finally, we were ready to launch our Website. If you're reading this, you obviously made it to our website! Please, take a moment to give us feedback on our Updated Survey as we'd greatly appreciate it! While we were
+                working on the website we used GitHub to more easily maintain and collaborate on our Website code. We also took advantage of the GitHub pages feature to host our final site on GitHub as well. Another feature that we
+                spent a lot of time working on and perfecting was our Website's responsiveness, which you'll notice if you browse our website from a cellphone or mobile browser! We wanted to make sure that our website was accessible
+                from computers and cell phones. Our GitHub Repository, where all of our code is located and publicly available, is linked below, as well as our GitHub Pages site (which is an alternate host for our Website).
+                <br>
+                <a target="_blank" rel="noopener noreferrer" href="https://github.com/intangibleSquid/i101-innovator-website/">GitHub Repository</a>
+                <span class="desktop-only">&nbsp;|&nbsp;</span>  <!-- spacer (desktop only) -->
+                <br class="mobile-only">  <!-- line break (mobile only) -->
+                <a target="_blank" rel="noopener noreferrer" href="https://intangiblesquid.github.io/i101-innovator-website/">GitHub Pages (Alternative Webhost)</a>
+                <br><br class="thirdBreak">  <!-- line breaks (one with custom spacing) -->
+                
+                <!-- Final Note to Readers -->
+                <div class="finalNote">Thank you for your interest in our Digital Campaign, and we hope that we were able to successfully highlight Radia Perlman, a wonderfully innovative underrepresented pioneer in technology!
+                    <br>  <!-- line break -->
+                    <span class="signature">-Jumanah, Cameron, Rioof, and Daniel</span>  <!-- special 'signature' line -->
+                </div>
+                <br>
+
             </p>
            
         </div>
