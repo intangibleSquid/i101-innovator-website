@@ -1,8 +1,13 @@
+<!DOCTYPE html>
 <html lang="en">  <!-- set HTML document language to English (en) - for browser translate functions -->
     
 
     <!-- Document Head (Metadata) -->
     <head>
+
+        <!-- Meta Tags -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <!-- Page Attributes -->
         <title> TEMPLATE </title>  <!-- webpage title -->
@@ -33,30 +38,50 @@
                     <div class="six columns navbarHeading">  <!-- navbar heading (navbar column) -->
                         Radia Perlman PhD
                         <br>  <!-- line break -->
-                        <span class="subHeading">"Mother of the Internet"</span>  <!-- navbar subheading -->
+                        <div class="subHeading">"Mother of the Internet"</div>  <!-- navbar subheading -->
                     </div>
 
-                    <div class="six columns">  <!-- navbar links (navbar column) -->
+                    <div class="six columns desktop-only">  <!-- navbar links (navbar column) -->
                         
                         <ol>  <!-- navbar links (ordered list) -->
 
                             <a onclick="toggle_on_page_links()" class="fauxButton" id="expandNavlinks"><i class="fa fa-bars"></i></a>  <!-- faux button (link) to show navbar links -->
 
-                            <span id="onPageLinks" class="onPage">  <!-- hide-able navbar ("on page") links -->
+                            <div id="onPageLinks" class="onPage">  <!-- hide-able navbar ("on page") links -->
 
                                 <a onclick="toggle_on_page_links()" class="fauxButton"><i id="expandNavlinks" class="fa fa-grip-lines-vertical"></i></a>  <!-- hidden: faux button (link) to hide navbar links -->
                                 <!-- using duplicate ID's is forbidden / bad practice! -- they're never on the DOM (Document Object Model) at the same time, and it made the JS a little easier, so I did it here (but don't!) -->
 
-                                <span class="navLinkContainer">  <!-- navbar links container -->
+                                <div class="navLinkContainer">  <!-- navbar links container -->
 
                                     <li><a class="active" href="index.html">Home</a></li>  <!-- current ('active') page link -->
                                     <li><a href="process.html">Deliverables</a></li>  <!-- 'deliverables' page link -->
                                     <li><a href="team.html">Team</a></li>  <!-- 'team' page link -->
                                     <li><a href="acknowledgements.html">Acknowledgements</a></li>  <!-- 'acknowledgements' page link -->
 
-                                </span>  <!-- if you use this page as a template: change the 'active' tag to the new page's link above! -->
+                                </div>  <!-- if you use this page as a template: change the 'active' tag to the new page's link above! -->
 
-                            </span>  <!-- this is probably bad practice too: the span / scripted anchor within the 'ol' tag (I'm not 100% sure though) -->
+                            </div>
+
+                            <div class="triviaGame">  <!-- trivia app (button) -->
+                                <a class="fauxButton" onclick="trivia_app_popup()"><i class="fa fa-gamepad"></i></a>
+                            </div>
+
+                        </ol>
+
+                    </div>
+
+                    <div class="six columns mobile-only">  <!-- navbar links (navbar column) [ONLY ON < 1400px RESOLUTION] -->
+                        
+                        <ol>  <!-- navbar links (ordered list) -->
+
+                            <div class="navLinkContainer navButtonContainer">  <!-- navbar links container -->
+                                <li><a class="fauxButton navButton active" href="index.html"><i class="fa fa-home"></i></a></li>
+                                <li><a class="fauxButton navButton" href="process.html"><i class="fa fa-chalkboard-user"></i></a></li>
+                                <li><a class="fauxButton navButton" href="team.html"><i class="fa fa-people-group"></i></a></li>
+                                <li><a class="fauxButton navButton" href="acknowledgements.html"><i class="fa fa-book"></i></a></li>
+                                <li><a class="fauxButton navButton" onclick="trivia_app_popup()"><i class="fa fa-gamepad"></i></a></li>
+                            </div>
 
                         </ol>
 
@@ -81,29 +106,6 @@
            <!-- IN HERE IS WHERE YOU'D WANT TO PUT YOUR CODE -->
            <!-- THE CONTAINER THAT THIS IS INSIDE OF IS THAT LITLE TRANSPARENT BOX -->
            
-           <!-- SO, I WOULD RECOMMEND PUTTING A HEADING IN HERE SOMEWHERE (JUST ADD TO THE EXISTING CSS AND ADD THE CLASS YOU WANT, LOOK AT THE OTHER HTML FOR EXAMPLES)  -->
-           <!-- AND ALSO PUTTING A PARAGRAPH AND TEXT (LOOK AT THE OTHER TWO PAGES HTML FOR EXAMPLES OF HOW I DID THIS, BUT YOU DON'T HAVE TO DO IT THAT WAY) -->
-
-           <!-- YOU WILL PROBABLY NEED TO ADD CUSTOM CSS TO CONTROL HOW THE BOXES ARE ARRANGED AND IF YOU WANT TO ADD IMAGES, JUST ADD NEW CSS CLASSES AND EITHER 
-                ADD THEM TO THE EXISTING HTML, JUST DON'T CHANGE THE CSS THAT'S ALREADY THERE: JUST ADD NEW ONES SOMEWHERE IN THE DOCUMENT AND GO FROM THERE -->
-
-            <!-- THE BEST ADVICE I COULD GIVE TO DO THAT IS TO LOOK AT THE INDEX AND ACKNOWLEDGEMENTS PAGES, LOOK AT THIS SECTION AND SEE WHAT'S DIFFERENT BETWEEN THE TWO -->
-
-            <!-- IF YOU NEED FURTHER HELP JUST SHOOT ME A MESSAGE -->
-
-            <!-- EVERTHING ABOVE THIS IS EITHER THE NAVBAR (HEADER) STYLESHEETS (HEAD) AND EVERYTHING BELOW THIS IS THE FOOTER AT THE BOTTOM OF THE PAGE (FOOTER) -->
-
-            <!-- MAKE SURE YOU DOWNLOAD THE NEWEST FILES BECAUSE I UPDATED SOMETHINGS WHEN I MADE THE ACKNOWLEDGEMENTS PAGE (I CHANGED THE CSS AND INDEX) -->
-
-            <!-- FINALLY, AT THE END I CAN HELP COMBINE THE FILES TOGETHER AND UPDATE ALL OF THE LINKS -->
-
-            <!-- YOU CAN DELETE ALL OF THESE COMMENTS IN THIS SPACE IF YOU WANT TO, JUST COPY/PASTE THE TEMPLATE FILE, RENAME IT AND START FROM THERE -->
-
-            <!-- ALSO, IF YOU WANT TO SEE THE SITE LIVE (AT LEAST WHAT I'VE UPLOADED SO FAR): https://intangiblesquid.github.io/i101-innovator-website/ -->
-
-            <!-- SO JUST REDOWNLOAD THE FILES, ADD WHAT YOU NEED TO TO THE CSS, COPY AND CHANGE THIS FILE AND WHEN YOU'RE DONE I'LL CONSOLIDATE THEM ALL -->
-
-            <!-- I TRIED TO COMMENT THE CSS VERY THOROUGHLY SO IT'S CLEAR WHAT IT ALL DOES (IF ANYTHING IS CONFUSING, LET ME KNOW) -->
                         
         </div>
         

@@ -1,8 +1,13 @@
+<!DOCTYPE html>
 <html lang="en">  <!-- set HTML document language to English (en) - for browser translate functions -->
     
 
     <!-- Document Head (Metadata) -->
     <head>
+
+        <!-- Meta Tags -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <!-- Page Attributes -->
         <title> Deliverables </title>  <!-- webpage title -->
@@ -33,30 +38,50 @@
                     <div class="six columns navbarHeading">  <!-- navbar heading (navbar column) -->
                         Radia Perlman PhD
                         <br>  <!-- line break -->
-                        <span class="subHeading">"Mother of the Internet"</span>  <!-- navbar subheading -->
+                        <div class="subHeading">"Mother of the Internet"</div>  <!-- navbar subheading -->
                     </div>
 
-                    <div class="six columns">  <!-- navbar links (navbar column) -->
+                    <div class="six columns desktop-only">  <!-- navbar links (navbar column) -->
                         
                         <ol>  <!-- navbar links (ordered list) -->
 
                             <a onclick="toggle_on_page_links()" class="fauxButton" id="expandNavlinks"><i class="fa fa-bars"></i></a>  <!-- faux button (link) to show navbar links -->
 
-                            <span id="onPageLinks" class="onPage">  <!-- hide-able navbar ("on page") links -->
+                            <div id="onPageLinks" class="onPage">  <!-- hide-able navbar ("on page") links -->
 
                                 <a onclick="toggle_on_page_links()" class="fauxButton"><i id="expandNavlinks" class="fa fa-grip-lines-vertical"></i></a>  <!-- hidden: faux button (link) to hide navbar links -->
                                 <!-- using duplicate ID's is forbidden / bad practice! -- they're never on the DOM (Document Object Model) at the same time, and it made the JS a little easier, so I did it here (but don't!) -->
 
-                                <span class="navLinkContainer">  <!-- navbar links container -->
+                                <div class="navLinkContainer">  <!-- navbar links container -->
 
                                     <li><a href="index.html">Home</a></li>  <!-- 'home' page link -->
                                     <li><a class="active" href="process.html">Deliverables</a></li>  <!-- current ('active') page link -->
                                     <li><a href="team.html">Team</a></li>  <!-- 'team' page link -->
                                     <li><a href="acknowledgements.html">Acknowledgements</a></li>  <!-- 'acknowledgements' page link -->
 
-                                </span>  <!-- if you use this page as a template: change the 'active' tag to the new page's link above! -->
+                                </div>  <!-- if you use this page as a template: change the 'active' tag to the new page's link above! -->
 
-                            </span>  <!-- this is probably bad practice too: the span / scripted anchor within the 'ol' tag (I'm not 100% sure though) -->
+                            </div>
+
+                            <div class="triviaGame">  <!-- trivia app (button) -->
+                                <a class="fauxButton" onclick="trivia_app_popup()"><i class="fa fa-gamepad"></i></a>
+                            </div>
+
+                        </ol>
+
+                    </div>
+
+                    <div class="six columns mobile-only">  <!-- navbar links (navbar column) [ONLY ON < 1400px RESOLUTION] -->
+                        
+                        <ol>  <!-- navbar links (ordered list) -->
+
+                            <div class="navLinkContainer navButtonContainer">  <!-- navbar links container -->
+                                <li><a class="fauxButton navButton" href="index.html"><i class="fa fa-home"></i></a></li>
+                                <li><a class="fauxButton navButton active" href="process.html"><i class="fa fa-chalkboard-user"></i></a></li>
+                                <li><a class="fauxButton navButton" href="team.html"><i class="fa fa-people-group"></i></a></li>
+                                <li><a class="fauxButton navButton" href="acknowledgements.html"><i class="fa fa-book"></i></a></li>
+                                <li><a class="fauxButton navButton" onclick="trivia_app_popup()"><i class="fa fa-gamepad"></i></a></li>
+                            </div>
 
                         </ol>
 
@@ -82,33 +107,36 @@
             <p>  <!-- content paragraph -->
                 The first thing that our group created were digital artifacts to represent Radia Perlman. We created posts with outlines from Instagram, Facebook, and Twitter. 
                 A link to view these artifacts is below.
-                <br>&emsp;
+                <br>
                 <a target="_blank" rel="noopener noreferrer" href="https://xd.adobe.com/view/3317ac1d-c1f9-4e17-b079-60c00d80f0ec-6644/">Digital Artifacts</a>
-                <br><br style="line-height: 0.4em;">  <!-- line breaks (one with custom spacing) -->
+                <br><br class="thirdBreak">  <!-- line breaks (one with custom spacing) -->
                 The second step for our group was to make a project wireframe. Our wireframes provide information about Radia Perlman and information about us, the creators. 
                 A link to our project wireframes is below.
-                <br>&emsp;
+                <br>
                 <a target="_blank" rel="noopener noreferrer" href="https://xd.adobe.com/view/47cf64d3-bb15-49f3-8cd3-f51ee6b67554-129c/">Project Wireframes</a>
-                <br><br style="line-height: 0.4em;">  <!-- line breaks (one with custom spacing) -->
+                <br><br class="thirdBreak">  <!-- line breaks (one with custom spacing) -->
                 The third step for our group project was to create a survey. The survey asks the typical survey questions, and more questions that are specific to our Digital 
                 Artifacts from step 1. You can take a look at our survey at the link below.
-                <br>&emsp;
+                <br>
                 <a target="_blank" rel="noopener noreferrer" href="https://forms.gle/SsqUpRjxHG5rANNe9/">Survey</a>
-                <br><br style="line-height: 0.4em;">  <!-- line breaks (one with custom spacing) -->
+                <br><br class="thirdBreak">  <!-- line breaks (one with custom spacing) -->
                 The fourth step our group did was to send out our survey. We sent the survey to as many people as possible, and recorded their responses on an Excel spreadsheet. We also
                 cleaned the data and created some minor data visualizations.
-                <br>&emsp;
+                <br>
                 <a target="_blank" rel="noopener noreferrer" href="files/I101-Group01-Responses-Cleaned.xlsx">Survey Data</a>
-                <br><br style="line-height: 0.4em;">  <!-- line breaks (one with custom spacing) -->
+                <br><br class="thirdBreak">  <!-- line breaks (one with custom spacing) -->
                 Our group did further exercises in data visualization by using Google's Looker Studio. We created some simple data visualizations based on PEW Research Survey Data.
                 To view these Data Visualizations, follow the link below.
-                <br>&emsp;
+                <br>
                 <a target="_blank" rel="noopener noreferrer" href="https://lookerstudio.google.com/reporting/7e328847-7aed-4e22-b5a4-60401224bbbc/">Data Visualization</a>
-                <br><br style="line-height: 0.4em;">  <!-- line breaks (one with custom spacing) -->
+                <br><br class="thirdBreak">  <!-- line breaks (one with custom spacing) -->
                 Finally, we launched our Digital Campaign for Radia Perlman. While we haven't gotten to this step yet, once we do, you can view our Artifacts at the link below.
-                <br>&emsp;
+                <br>
                 <a class="disabledLink" target="_blank" rel="noopener noreferrer" href="#">Digital Campaign</a>
-                <br><br style="line-height: 0.4em;">  <!-- line breaks (one with custom spacing) -->
+                <br><br class="thirdBreak">  <!-- line breaks (one with custom spacing) -->
+
+                <!-- UPDATE LINKS / PAGE -->
+
             </p>
            
         </div>

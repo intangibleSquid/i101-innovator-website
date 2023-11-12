@@ -5,12 +5,15 @@
    ====================================================================== */
 
 /*  ---[[[ body ]]]---  */
+body {  /* body elements */
+    margin: 0;  /* margin (zero default margin) */
+}
+
 .bodyContainer {  /* body containers */
     background-color: #cccccc20;  /* background color (transluscent) */
     width: 95%;  /* width (by percentage) */
     margin: 0 auto;  /* margin (right/left and top/bottom) */
     margin-block: 10px 20px;  /* block margin (top and bottom) */
-    text-align: center;  /* align text (center) */
     border-radius: 6px;  /* rounded container edges */
 }
 
@@ -26,13 +29,8 @@
     margin-top: 38px;  /* margin (top) */
 }
 
-.bodyHeading::after {  /* line after body headings (pseudo-element, child of 'body heading') */
-    display: inline-block;  /* display inline-block */
-    content: "";  /* empty content (horizontal line) */
-    height: 5px;  /* line height */
-    background: #3d0048;  /* line color */
-    position: absolute;  /* absolute position */
-    right: 110px;  /* spacing from the right of the page */
+.secondHeading, .thirdHeading {  /* second and third body heading */
+    padding-left: 20px;  /* padding (left) */
 }
 
 .bodySubheading {  /* body subheadings */
@@ -45,16 +43,6 @@
     line-height: 0.1rem;  /* line height */
 }
 
-.bodySubheading::before, .bodySubheading::after {  /* lines before and after body subheadings (pseudo-elements, children of 'body subheadings' ) */
-    display: inline-block;  /* display inline-block */
-    content: "";  /* empty content (horizontal line) */
-    width: 180px;  /* line width */
-    height: 2px;  /* line height */
-    background: #3d0048;  /* line color */
-    margin-block: 6px;  /* block margin */
-    margin-inline: 20px;  /* inline margin */
-}
-
 .bodyContainer p {  /* body paragraphs */
     color: #fff;  /* text color */
     text-align: justify;  /* text alignment (justified) */
@@ -63,7 +51,11 @@
     font-family: Arial, Helvetica, sans-serif;  /* font (with fallback fonts) */
 }
 
-.poem {  /* poem container */
+.poemContainer {  /* poem container */
+    text-align: center;  /* text alignment (center) */
+}
+
+.poem {  /* poem content */
     color: #fff;  /* text color */
     font-size: 20px;  /* font size */
     font-family: 'Patrick Hand SC', Arial, Helvetica, sans-serif;  /* font (with fallback fonts) */
@@ -78,34 +70,18 @@
     font-weight: lighter;  /* font weight */
 }
 
-.firstHeading {  /* first heading */
-    margin-right: 76%;  /* margin (right) */
-}
-
-.firstHeading::after {  /* line after first heading (pseudo-element, child of 'body heading') */
-    width: 65%;  /* width */
-}
-
-.secondHeading {  /* second heading */
-    margin-right: 58%;  /* margin (right) */
-}
-
-.secondHeading::after {  /* line after second heading (pseudo-element, child of 'body heading') */
-    width: 50%;  /* width */
-}
-
-.thirdHeading {  /* third heading */
-    margin-right: 83%;  /* margin (right) */
-}
-
-.thirdHeading::after {  /* line after second heading (pseudo-element, child of 'body heading') */
-    width: 72%;  /* width */
-}
-
 .bodyContainer a {  /* body container links */
     text-decoration: none;  /* text decoration (no underline) */
     color: lightskyblue;  /* text color */
     font-weight: bolder;  /* font weight */
+}
+
+.halfBreak {  /* half of a normal line break */
+    line-height: 0.6em;  /* line height */
+}
+
+.thirdBreak {  /* one third of a normal line break */
+    line-height: 0.4em;  /* line height */
 }
 
 
@@ -143,6 +119,125 @@
 }
 
 
+/*  ---[[[ responsive design: 'first' breakpoint ]]]---  */
+@media screen and (min-width: 1451px) {  /* screen has a minimum width of 1451px */
+    
+    .bodyHeading::after {  /* line after body headings (pseudo-element, child of 'body heading') */
+        display: inline-block;  /* display inline-block */
+        content: "";  /* empty content (horizontal line) */
+        height: 5px;  /* line height */
+        background: #3d0048;  /* line color */
+        position: absolute;  /* absolute position */
+        right: 110px;  /* spacing from the right of the page */
+    }
+    
+    .bodySubheading::before, .bodySubheading::after {  /* lines before and after body subheadings (pseudo-elements, children of 'body subheadings' ) */
+        display: inline-block;  /* display inline-block */
+        content: "";  /* empty content (horizontal line) */
+        width: 180px;  /* line width */
+        height: 2px;  /* line height */
+        background: #3d0048;  /* line color */
+        margin-block: 6px;  /* block margin */
+        margin-inline: 20px;  /* inline margin */
+    }
+
+    .firstHeading::after {  /* line after first heading (pseudo-element, child of 'body heading') */
+        width: 65%;  /* width */
+    }
+
+    .secondHeading::after {  /* line after second heading (pseudo-element, child of 'body heading') */
+        width: 50%;  /* width */
+    }
+
+    .thirdHeading::after {  /* line after second heading (pseudo-element, child of 'body heading') */
+        width: 72%;  /* width */
+    }
+    
+}
+
+
+/*  ---[[[ responsive design: 'second' breakpoint ]]]---  */
+@media only screen and (max-width: 1450px) {  /* screen has a maximum width of 1450px */
+    
+    .bodySubheading::before, .bodySubheading::after {  /* body subheading (before and after) */
+        display: none;  /* hide the lines around the subheading */
+    }
+
+
+    /*  ---[[[ responsive design: 'mobile device' breakpoint ]]]---  */
+    @media screen and (max-width: 549px) {  /* screen has a maximum width of 549px */
+
+        html, body {  /* html and body (prevent horizontal scrolling) */
+            max-width: 100%;  /* set max-width to 100% */
+            overflow-x: hidden;  /* hide horizontal overflow */
+        }
+
+        .bodyContainer p {  /* body paragraphs */
+            display: block;  /* display block */
+            text-align: center;  /* text alignment (center) */
+        }
+
+        .firstHeading {  /* first heading */
+            padding-inline-start: 1px;  /* attempt to center heading */
+            padding-block-start: 28px;  /* margin block (start) */
+            padding-block-end: 36px;  /* margin block (end) */
+        }
+
+        .secondHeading {  /* second heading */
+            display: block;  /* display block */
+            line-height: 1.2em;  /* readjust line height */
+            padding-block-start: 25px;  /* padding block (start) */
+            text-align: center;  /* text alignment (center) */
+            font-size: 34px;  /* enlarge font */
+            margin-inline-start: -5%;
+            margin-block-end: 0;  /* remove space between photo and heading */
+            
+        }
+
+        .thirdHeading {  /* third heading */
+            margin-inline: 96px;  /* margin inline */
+            margin-block-end: 26px;  /* margin block (end) */
+        }
+
+        .lastHeading {  /* last heading */
+            margin-inline: calc(50% - 28.9vw);  /* calculated inline margin (near-center) */
+        }
+
+        .bodyHeading {  /* body heading */
+            font-size: 26px;  /* reduce font size */
+        }
+
+        .bodyContainer {  /* body container */
+            position: relative;  /* relative position (to arrange children) */
+        }
+
+        .rectImageContainer {  /* container for rectangular image */
+            display: block;  /* display block */
+            padding-inline: 56px;  /* padding inline */
+            text-align: center;  /* text alignment (center) */
+            position: absolute;  /* absolute position (CENTER) */
+            margin-top: 260px;  /* margin (top) */
+            left: 50%;  /* CENTER */
+            -webkit-transform: translate(-50%, -50%);  /* CENTER */
+            -moz-transform: translate(-50%, -50%);  /* CENTER */
+            -ms-transform: translate(-50%, -50%);  /* CENTER */
+            -o-transform: translate(-50%, -50%);  /* CENTER */
+            transform: translate(-50%, -50%);  /* CENTER */
+        }
+
+        .bodyContainer .contributionText {  /* contribution text */
+            margin-top: 526px;  /* move below image (image removed from document flow due to absolute position) */
+        }
+
+        .bodyContainer p a {  /* body paragraph links */
+            font-size: 14px;  /* reduce font size */
+        }
+
+    }
+
+}
+
+
 
 
 /* ======================================================================
@@ -152,20 +247,31 @@
    ====================================================================== */
 
 /*  ---[[[ body ]]]---  */
-.processHeading {
-    margin-bottom: 30px;
-}
-
-.disabledLink {
-    pointer-events: none;
-    cursor: default;
-    opacity: 0.6;
+.processHeading {  /* process heading */
+    margin-bottom: 30px;  /* margin (bottom) */
+    padding-left: 20px;  /* padding (left) */
 }
 
 
-/*  ---[[[ page todo ]]]---  */
-/* CONVERT TO LOOK MORE LIKE THE DELIVERABLES PAGE IN THE WIREFRAME BUT KEEP THIS SECTION AS EXPLANATION */
-/* INCLUDE IMAGES TOO (LIKE WEBSITE WIREFRAMES EXAMPLE) */
+/*  ---[[[ deprecated rules ]]]---  */
+.disabledLink {  /* disabled anchor / link */
+    pointer-events: none;  /* make link non-clickable */
+    cursor: default;  /* default cursor (don't use the pointer cursor) */
+    opacity: 0.6;  /* set opacity */
+}
+
+
+/*  ---[[[ responsive design: 'mobile device' breakpoint ]]]---  */
+@media screen and (max-width: 549px) {  /* screen has a maximum width of 549px */
+
+    .processHeading {  /* process heading */
+        line-height: 1.2em;  /* reset line spacing */
+        text-align: center;  /* center heading */
+        font-size: auto;  /* auto font size */
+        margin-inline-start: -20px;  /* near-center heading */
+    }
+
+}
 
 
 
@@ -177,25 +283,15 @@
    ====================================================================== */
 
 /*  ---[[[ body ]]]---  */
-.teamContainer {
-    display: inline-block;
-    width: 45%;
-    margin-inline: 36px;
-    height: 20%
+.teamContainer {  /* team container */
+    text-align: center;  /* text alignment (center) */
+    position: relative;  /* relative position */
 }
 
-.containerRow {
-    text-align: center;
+.teamContainer p {
+    display: inline;  /* display inline */
+    text-align: center;  /* text alignment (center) */
 }
-
-.teamHeading {
-    float: inline-start;
-}
-
-/* .teamHeading::after {
-    display: inline-block;
-    width: 10%;
-} */
 
 
 /*  ---[[[ images ]]]---  */
@@ -210,8 +306,7 @@
     margin-inline: 20px;  /* inline margin */
     margin-block-start: 10px;  /* block margin (start) */
     shape-outside: circle(64px);  /* AWESOME property that allows inline content to be 'wrapped' around element (in a circle) */
-    display: block;
-    clear: both;
+    inset: 10px;  /* inset */
 }
 
 .roundImager2 {  /* round 'image cropping' container */
@@ -225,19 +320,23 @@
     margin-inline: 20px;  /* inline margin */
     margin-block-start: 10px;  /* block margin (start) */
     shape-outside: circle(64px);  /* AWESOME property that allows inline content to be 'wrapped' around element (in a circle) */
-    display: block;
-    clear: both;
+    inset: 5px;  /* inset */
 }
 
 
-/*  ---[[[ page todo ]]]---  */
-/* two columns? */
-/* image */
-/* responsive */
-/* process page */
-/* references */
-/* lines after text (better way, don't use pseudo-elements, use <hr>) */
-/* make more uniform */
+/*  ---[[[ responsive design: 'mobile device' breakpoint ]]]---  */
+@media screen and (max-width: 549px) {  /* screen has a maximum width of 549px */
+
+    .imageBug {  /* process heading */
+        margin-top: calc(10% + 4.2vh);  /* calculate top margin */
+        margin-block-end: 60px;  /* margin block (end) */
+    }
+
+    .teamContainer {  /* team heading */
+        text-align: center;  /* text alignment (center) */
+    }
+
+}
 
 
 
@@ -248,9 +347,9 @@
 
    ====================================================================== */
 
-   /*  ---[[[ body ]]]---  */
+/*  ---[[[ body ]]]---  */
 .acknowledgementsHeading {  /* acknowledgements heading */
-    margin-right: 1230px;  /* margin (right) */
+    padding-left: 20px;  /* padding (left) */
 }
 
 .acknowledgementsHeading::after {  /* line after acknowledgements heading (pseudo-element, child of 'acknowledgements heading') */
@@ -270,6 +369,16 @@
 }
 
 
+/*  ---[[[ responsive design: 'mobile device' breakpoint ]]]---  */
+@media screen and (max-width: 549px) {  /* screen has a maximum width of 549px */
+
+    .acknowledgementsContainer {  /* acknowledgements container */
+        text-align: center;  /* text alignment (center) */
+    }
+
+}
+
+
 
 
 /* ======================================================================
@@ -280,7 +389,7 @@
 
 /*  ---[[[ page background ]]]---  */
 body.scrollingBackground {  /* scrolling background image */
-    background-image: url("../images/background.png");  /* set a background image */
+    background-image: url("../images/background.png");  /* set a background image (had to go up a directory '../') */
     min-height: 100%;  /* set a minimum image height (for parallax scrolling effect -- STILL NEED TO ADD THIS EFFECT) */
     background-attachment: fixed;  /* fixed image attachment */
     background-position: center;  /* position image (center) -- STILL NEED TO ADD PARALLAX EFFECT */
@@ -292,8 +401,8 @@ header {  /* header */
     position: fixed;  /* fixed navbar to the top of the screen / viewport */
     z-index: 10;  /* z-index (not sure if Skeleton utilizes the z-index, but I wanted the navbar on top of anything else) */
     width: 100%;  /* width */
-    top: 0;  /* absolute position (top) */
-    left: 0;  /* absolute position (left) */
+    top: 0;  /* fixed position (top) */
+    left: 0;  /* fixed position (left) */
 }
 
 body {  /* body */
@@ -301,11 +410,11 @@ body {  /* body */
 }
 
 .navbarContainer {  /* navbar container */
+    position: relative;  /* relative position (so child elements can be placed absolutely or relatively) */
     list-style-type: none;  /* remove numbering from ordered list */
-    padding: 0;  /* padding */
     background-color: #570067;  /* navbar background color */
     height: 150px;  /* height */
-    width: 100%;  /* width */
+    width: 100vw;  /* width */
 }
 
 .navbarContainer .navbarImage {  /* navbar image */
@@ -315,22 +424,24 @@ body {  /* body */
 }
 
 .navbarContainer .navbarHeading {  /* navbar heading */
-    position: fixed;  /* fixed position */
+    position: absolute;  /* absolute position */
     padding-top: 8px;  /* padding (top) */
     padding-left: 166px;  /* padding (left) */
     color: #fff;  /* text color */
     font-family: 'Fira Code', 'Courier New', Courier, monospace;  /* font (with fallback fonts) */
     font-size: 24px;  /* font size */
     font-weight: bolder;  /* font weight */
+    white-space: nowrap;  /* don't wrap whitespace */
 }
 
 .navbarContainer .navbarHeading .subHeading {  /* navbar subheading */
+    position: absolute;  /* absolute position */
     font-size: 16px;  /* font size */
     font-weight: lighter;  /* font weight */
 }
 
-.navbarContainer .navLinkContainer {
-    position: fixed;  /* fixed position */
+.navbarContainer .navLinkContainer {  /* navlink container */
+    position: relative;  /* relative position */
     padding-top: 110px;  /* padding (top) */
     padding-left: 10px;  /* padding (left) */
     margin-left: 26px;  /* margin (left) */
@@ -358,8 +469,7 @@ body {  /* body */
 }
 
 .navbarContainer li a.active {  /* current page navbar link (add 'active' class to current page link in navbar HTML) */
-    color: gold  /* text color */
-    /* display: none; */ /* (COULD ALSO DO THIS, TRYING TO DECIDE IF I WANT TO) */
+    color: gold;  /* text color */
 }
 
 .fauxButton {  /* faux (fake) button */
@@ -369,17 +479,23 @@ body {  /* body */
     cursor: pointer;  /* pointer cursor (the little hand thing) */
     position: absolute;  /* absolute position */
     font-size: 30px;  /* font size */
-    padding-top: 110px;  /* padding (top) */
-    padding-left: 10px;  /* padding (left) */
+    padding-top: 102px;  /* padding (top) */
+    padding-left: 15px;  /* padding (left) */
+    white-space: nowrap;  /* don't wrap whitespace */
 }
 
 .fauxButton:hover {  /* faux (fake) button (hover effect) */
     color: goldenrod;  /* font color */
 }
 
+.triviaGame {  /* trivia game faux button position */
+    display: inline-block;  /* display inline block */
+    position: absolute;  /* absolute position */
+    right: calc(100px - 1.8vw);  /* right (calculated, so it doesn't shift around too much) */
+}
+
 .onPage {  /* "on page" rule (for JS) */
     display: none;  /* display none */
-    /* display: inline-block; */  /* display inline block (REMOVE THIS - ADDED ELSEWHERE) */
 }
 
 .show {  /* 'show' rule (for JS) */
@@ -390,11 +506,15 @@ body {  /* body */
     display: none;  /* "hide" navbar links with JavaScript */
 }
 
+.mobile-only {  /* 'mobile only' display rule (not best practice, but semi-responsive) */
+    display: none;  /* hide 'mobile only' elements */
+}
+
 
 /*  ---[[[ footer ]]]---  */
 footer {  /* footer */
     margin-top: 20px;  /* margin (top) */
-    width: 100%;  /* width */
+    width: 100vw;  /* width */
 }
 
 div.pageFooter {  /* footer container */
@@ -418,40 +538,89 @@ footer a {  /* footer links */
 }
 
 
+/*  ---[[[ responsive design: 'second' breakpoint ]]]---  */
+@media only screen and (max-width: 1450px) {  /* screen has a maximum width of 1450px */
+    
+    .desktop-only {  /* 'desktop only' display rule (not best practice, but semi-responsive) */
+        display: none;  /* hide 'desktop only' elements */
+    }
+
+    .mobile-only {  /* 'mobile only' display rule (not best practice, but semi-responsive) */
+        display: inline-block;  /* display inline block */
+    }
+
+    .navButtonContainer {  /* nav button container */
+        display: inline-block;  /* display inline block */
+        position: absolute;  /* absolute positioning */
+        white-space: nowrap;  /* don't wrap whitespace */
+        top: 0;  /* top */
+        right: 0;  /* right */
+        bottom: 0;  /* bottom */
+        left: calc(120px - 8.5vw);  /* left (calculated, so it doesn't shift around too much) */
+    }
+
+    .navButton {  /* nav buttons */
+        position: relative;  /* relative position */
+        display: inline-block;  /* display inline block */
+        padding: 10px;  /* padding */
+    }
+
+
+    /*  ---[[[ responsive design: 'mobile device' breakpoint ]]]---  */
+    @media screen and (max-width: 549px) {  /* screen has a minimum width of 549px */
+        
+        .navButtonContainer {  /* nav button container */
+            position: relative;  /* position relative */
+            top: -156px;  /* push back to the proper location */
+            left: 120px;  /* push back to the proper location */
+        }  /* this was a 'hacky' fix, but it worked, at the end of the day (WOO Skeleton, that 'row' kept overflowing) */
+
+        .navbarContainer li a {  /* navbar anchor links */
+            font-size: 16px;  /* shrink font size */
+            padding-inline: 10px;  /* reduce inline padding */
+            padding-top: 16px;  /* increase top padding */
+        }
+
+        .navbarContainer .navbarHeading {  /* navbar heading */
+            font-size: 18px;  /* reduce font size */
+        }
+
+       .navbarContainer .navbarHeading .subHeading {  /* navbar subheading */
+            font-size: 12px;  /* reduce font size */
+       }
+
+       footer h3.pageFooter {  /* footer text */
+            font-size: 16px;  /* reduce font size */
+       }
+        
+    }
+
+}
+
+
+/*  ---[[[ responsive design: landscape ]]]---  */
+@media screen and (orientation: landscape) {
+
+    html, body {  /* html and body (prevent horizontal scrolling) */
+        max-width: 100%;  /* set max-width to 100% */
+        overflow-x: hidden;  /* hide horizontal overflow */
+    }
+    
+}
+
+
 /*  ---[[[ fonts ]]]---  */
 @font-face {  /* import 'Fira Code' font */
     font-family: "Fira Code";  /* font-family name */
-    src: url("../fonts/Fira_Code/FiraCode-VariableFont_wght.ttf");  /* font file location */
+    src: url("../fonts/Fira_Code/FiraCode-VariableFont_wght.ttf");  /* font file location (had to go up a directory '../') */
 }
 
 @font-face {  /* import 'Cedarville Cursive' font */
     font-family: "Cedarville Cursive";  /* font-family name */
-    src: url("../fonts/Cedarville_Cursive/CedarvilleCursive-Regular.ttf");  /* font file location */
+    src: url("../fonts/Cedarville_Cursive/CedarvilleCursive-Regular.ttf");  /* font file location (had to go up a directory '../') */
 }
 
 @font-face {  /* import 'Patrick Hand SC' font */
     font-family: "Patrick Hand SC";  /* font-family name */
-    src: url("../fonts/Patrick_Hand_SC/PatrickHandSC-Regular.ttf");  /* font file location */
+    src: url("../fonts/Patrick_Hand_SC/PatrickHandSC-Regular.ttf");  /* font file location (had to go up a directory '../') */
 }
-
-
-/*  -------------------------- GLOBAL TODO -------------------------- */
-/*  ---[[[ responsive design: phones ]]]---  */
-/* @media only screen and (max-width: 480px) {} */
-/* @media only screen and (max-width: 480px) and (orientation: landscape) {} -- necessary? might be a little too responsive... */
-
-/*  ---[[[ responsive design: tablets ]]]---  */
-/* @media only screen and (min-width:481px) and (max-width:768px) {} */
-/* NOTE TO SELF: CHANGE PIXEL TO '%' OR EM/REM MEASUREMENTS WHERE POSSIBLE */
-
-/* CRITICAL TO-DO */
-/* MAKE 'PROJECTS' SUB-DIRECTORY IN IMAGES DIRECTORY FOR PROJECT SCREENS - ADD RF IMAGE SOURCES TO ACKNOWLEDGEMENTS!!!!! */
-/* MAKE TEXT MORE READABLE - THE WHITE STARS IN THE BACKGROUND INTEREFERE SOMETIMES */
-/* ONLY IMPLEMENT HAMBURGER MENU FOR NAVBAR WHEN ON PHONE OR TABLET SCREEN, OTHERWISE ALWAYS SHOW NAVIGATION LINKS */
-/* MAKE SURE ALL IMAGES ON ALL PAGES HAVE ALT-TEXT */
-/* RESPONSIVE, MOBILE-FIRST DESIGN */
-/* ADD ARIA TAGS FOR ACCESSIBILITY? */
-/* COMMENT ALL PAGES / ALL CODE */
-/* REMOVE INLINE STYLING */
-
-/* NOTE TO ANYONE ADDING TO THIS DOCUMENT: MAKE SURE YOUR CLASS NAMES ARE UNIQUE IF YOU DON'T WANT TO USE MINE */
